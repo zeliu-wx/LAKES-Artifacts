@@ -1,0 +1,6004 @@
+{
+  "knowledge_base_type": "performance_context_db",
+  "criteria": {
+    "loc_bins": [
+      {
+        "label": "0-100",
+        "min_inclusive": 0,
+        "max_exclusive": 100
+      },
+      {
+        "label": "100-200",
+        "min_inclusive": 100,
+        "max_exclusive": 200
+      },
+      {
+        "label": "200-300",
+        "min_inclusive": 200,
+        "max_exclusive": 300
+      },
+      {
+        "label": "300-400",
+        "min_inclusive": 300,
+        "max_exclusive": 400
+      },
+      {
+        "label": "400-500",
+        "min_inclusive": 400,
+        "max_exclusive": 500
+      },
+      {
+        "label": "500-600",
+        "min_inclusive": 500,
+        "max_exclusive": 600
+      },
+      {
+        "label": "600-700",
+        "min_inclusive": 600,
+        "max_exclusive": 700
+      },
+      {
+        "label": "700-800",
+        "min_inclusive": 700,
+        "max_exclusive": 800
+      },
+      {
+        "label": "800-900",
+        "min_inclusive": 800,
+        "max_exclusive": 900
+      },
+      {
+        "label": "900-1000",
+        "min_inclusive": 900,
+        "max_exclusive": 1000
+      },
+      {
+        "label": "1000+",
+        "min_inclusive": 1000,
+        "max_exclusive": null
+      }
+    ]
+  },
+  "entries": [
+    {
+      "source_id": "1",
+      "publication_date": null,
+      "dataset_profile": {
+        "dataset_name": "SmartBugs Curated",
+        "solc": [
+          "0.4.x",
+          "0.5.x"
+        ],
+        "contract_count_total": 140,
+        "realism_level": "Real-world",
+        "domain_tags": [
+          "Solidity",
+          "Smart Contracts",
+          "Blockchain"
+        ],
+        "loc_profile": {
+          
+        },
+        "complexity_stats": {
+          "avg_loc": 85.4,
+          "median_loc": 35.0,
+          "avg_functions": 6.9,
+          "avg_subcontracts": 2.8,
+          "vulnerability_categories": [
+            "access_control",
+            "arithmetic",
+            "denial_of_service",
+            "reentrancy",
+            "time_manipulation",
+            "front_running",
+            "bad_randomness",
+            "unchecked_low_level_calls",
+            "short_addresses"
+          ]
+        },
+        "what_contracts": null,
+        "how_collected": null,
+        "scale": null,
+        "labeling": null,
+        "target_vulnerabilities": [],
+        "label_granularity": null,
+        "label_count": null,
+        "label_count_basis": null
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "Securify2",
+          "metrics": {
+            "precision": 0.2,
+            "recall": 0.0048,
+            "f1_score": 0.0094,
+            "execution_time_avg": 24.4
+          },
+          "vulnerability_scores": {
+            "access_control": 0.5506,
+            "arithmetic": 0.0,
+            "denial_of_service": 0.6357,
+            "reentrancy": 0.1646,
+            "time_manipulation": 0.3248,
+            "front_running": 0.4581,
+            "bad_randomness": 0.0167,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Slither",
+          "metrics": {
+            "precision": 0.2348,
+            "recall": 0.6042,
+            "f1_score": 0.3382,
+            "execution_time_avg": 15.5
+          },
+          "vulnerability_scores": {
+            "access_control": 0.791,
+            "arithmetic": 0.005,
+            "denial_of_service": 0.0497,
+            "reentrancy": 0.8563,
+            "time_manipulation": 0.9728,
+            "front_running": 0.0,
+            "bad_randomness": 0.25,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Smartcheck",
+          "metrics": {
+            "precision": 0.0997,
+            "recall": 0.399,
+            "f1_score": 0.1595,
+            "execution_time_avg": 7.0
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0345,
+            "arithmetic": 0.0005,
+            "denial_of_service": 0.0108,
+            "reentrancy": 0.1402,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0167,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Osiris",
+          "metrics": {
+            "precision": 0.146,
+            "recall": 0.3173,
+            "f1_score": 0.2,
+            "execution_time_avg": 527.7
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0006,
+            "arithmetic": 0.1637,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0328,
+            "time_manipulation": 0.0035,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Manticore",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 1051.3
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0,
+            "arithmetic": 0.0,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Mythril",
+          "metrics": {
+            "precision": 0.3002,
+            "recall": 0.7295,
+            "f1_score": 0.4254,
+            "execution_time_avg": 540.7
+          },
+          "vulnerability_scores": {
+            "access_control": 0.1599,
+            "arithmetic": 0.0221,
+            "denial_of_service": 0.0014,
+            "reentrancy": 0.0683,
+            "time_manipulation": 0.1844,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Oyente",
+          "metrics": {
+            "precision": 0.3516,
+            "recall": 0.16,
+            "f1_score": 0.2199,
+            "execution_time_avg": 32.1
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0006,
+            "arithmetic": 0.0457,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0223,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Securify",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": null,
+            "execution_time_avg": 1383.6
+          },
+          "vulnerability_scores": null
+        }
+      ]
+    },
+    {
+      "source_id": "2",
+      "publication_date": null,
+      "dataset_profile": {
+        "dataset_name": "Smart Contracts Benchmark Suite",
+        "solc": [
+          "0.4.x",
+          "0.5.x",
+          "0.6.x"
+        ],
+        "contract_count_total": 214,
+        "realism_level": "Real-world",
+        "domain_tags": [
+          "token"
+        ],
+        "loc_profile": {
+          "loc_bin_counts_by_solc": {
+            "0-100": {
+              "0.4.x": 82,
+              "0.5.x": 16,
+              "0.6.x": 1,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "100-200": {
+              "0.4.x": 68,
+              "0.5.x": 1,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "200-300": {
+              "0.4.x": 30,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "300-400": {
+              "0.4.x": 5,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "400-500": {
+              "0.4.x": 1,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "500-600": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "600-700": {
+              "0.4.x": 1,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "700-800": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "800-900": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "900-1000": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "1000+": {
+              "0.4.x": 2,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            }
+          }
+        },
+        "complexity_stats": {
+          "avg_loc": 122.6,
+          "median_loc": 116.0,
+          "avg_functions": 13.5,
+          "avg_subcontracts": 5.0,
+          "vulnerability_categories": [
+            "access_control",
+            "arithmetic",
+            "denial_of_service",
+            "reentrancy",
+            "time_manipulation",
+            "front_running",
+            "bad_randomness",
+            "unchecked_low_level_calls",
+            "short_addresses"
+          ]
+        },
+        "what_contracts": null,
+        "how_collected": null,
+        "scale": null,
+        "labeling": null,
+        "target_vulnerabilities": [],
+        "label_granularity": null,
+        "label_count": null,
+        "label_count_basis": null
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "Securify2",
+          "metrics": {
+            "precision": 0.1383,
+            "recall": 0.0207,
+            "f1_score": 0.036,
+            "execution_time_avg": 32.7
+          },
+          "vulnerability_scores": {
+            "access_control": 0.5506,
+            "arithmetic": 0.0,
+            "denial_of_service": 0.6357,
+            "reentrancy": 0.1646,
+            "time_manipulation": 0.3248,
+            "front_running": 0.4581,
+            "bad_randomness": 0.0167,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Slither",
+          "metrics": {
+            "precision": 0.1066,
+            "recall": 0.282,
+            "f1_score": 0.1547,
+            "execution_time_avg": 17.9
+          },
+          "vulnerability_scores": {
+            "access_control": 0.791,
+            "arithmetic": 0.005,
+            "denial_of_service": 0.0497,
+            "reentrancy": 0.8563,
+            "time_manipulation": 0.9728,
+            "front_running": 0.0,
+            "bad_randomness": 0.25,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Smartcheck",
+          "metrics": {
+            "precision": 0.0628,
+            "recall": 0.2747,
+            "f1_score": 0.1022,
+            "execution_time_avg": 4.8
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0345,
+            "arithmetic": 0.0005,
+            "denial_of_service": 0.0108,
+            "reentrancy": 0.1402,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0167,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Osiris",
+          "metrics": {
+            "precision": 0.1673,
+            "recall": 0.4638,
+            "f1_score": 0.2459,
+            "execution_time_avg": 1089.2
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0006,
+            "arithmetic": 0.1637,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0328,
+            "time_manipulation": 0.0035,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Manticore",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 2604.9
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0,
+            "arithmetic": 0.0,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Mythril",
+          "metrics": {
+            "precision": 0.2069,
+            "recall": 0.0707,
+            "f1_score": 0.1054,
+            "execution_time_avg": 2104.3
+          },
+          "vulnerability_scores": {
+            "access_control": 0.1599,
+            "arithmetic": 0.0221,
+            "denial_of_service": 0.0014,
+            "reentrancy": 0.0683,
+            "time_manipulation": 0.1844,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Oyente",
+          "metrics": {
+            "precision": 0.1778,
+            "recall": 0.1739,
+            "f1_score": 0.1758,
+            "execution_time_avg": 98.4
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0006,
+            "arithmetic": 0.0457,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0223,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "3",
+      "publication_date": null,
+      "dataset_profile": {
+        "dataset_name": "Not So Smart Contracts",
+        "solc": [
+          "0.4.x"
+        ],
+        "contract_count_total": 25,
+        "realism_level": "Real-world",
+        "domain_tags": [
+          "utility",
+          "gambling"
+        ],
+        "loc_profile": {
+          "loc_bin_counts_by_solc": {
+            "0-100": {
+              "0.4.x": 15,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "100-200": {
+              "0.4.x": 4,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "200-300": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "300-400": {
+              "0.4.x": 1,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "400-500": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "500-600": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "600-700": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "700-800": {
+              "0.4.x": 1,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "800-900": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "900-1000": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "1000+": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            }
+          }
+        },
+        "complexity_stats": {
+          "avg_loc": 136.5,
+          "median_loc": 42.0,
+          "avg_functions": 11.6,
+          "avg_subcontracts": 3.7,
+          "vulnerability_categories": [
+            "access_control",
+            "arithmetic",
+            "denial_of_service",
+            "reentrancy",
+            "time_manipulation",
+            "front_running",
+            "bad_randomness",
+            "unchecked_low_level_calls",
+            "short_addresses"
+          ]
+        },
+        "what_contracts": null,
+        "how_collected": null,
+        "scale": null,
+        "labeling": null,
+        "target_vulnerabilities": [],
+        "label_granularity": null,
+        "label_count": null,
+        "label_count_basis": null
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "Securify2",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 21.3
+          },
+          "vulnerability_scores": {
+            "access_control": 0.5506,
+            "arithmetic": 0.0,
+            "denial_of_service": 0.6357,
+            "reentrancy": 0.1646,
+            "time_manipulation": 0.3248,
+            "front_running": 0.4581,
+            "bad_randomness": 0.0167,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Slither",
+          "metrics": {
+            "precision": 0.0274,
+            "recall": 0.1818,
+            "f1_score": 0.0476,
+            "execution_time_avg": 10.0
+          },
+          "vulnerability_scores": {
+            "access_control": 0.791,
+            "arithmetic": 0.005,
+            "denial_of_service": 0.0497,
+            "reentrancy": 0.8563,
+            "time_manipulation": 0.9728,
+            "front_running": 0.0,
+            "bad_randomness": 0.25,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Smartcheck",
+          "metrics": {
+            "precision": 0.0145,
+            "recall": 0.3333,
+            "f1_score": 0.0278,
+            "execution_time_avg": 6.5
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0345,
+            "arithmetic": 0.0005,
+            "denial_of_service": 0.0108,
+            "reentrancy": 0.1402,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0167,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Osiris",
+          "metrics": {
+            "precision": 0.0357,
+            "recall": 0.1667,
+            "f1_score": 0.0588,
+            "execution_time_avg": 389.9
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0006,
+            "arithmetic": 0.1637,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0328,
+            "time_manipulation": 0.0035,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Manticore",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 1810.1
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0,
+            "arithmetic": 0.0,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Mythril",
+          "metrics": {
+            "precision": 0.2353,
+            "recall": 0.2857,
+            "f1_score": 0.2581,
+            "execution_time_avg": 906.0
+          },
+          "vulnerability_scores": {
+            "access_control": 0.1599,
+            "arithmetic": 0.0221,
+            "denial_of_service": 0.0014,
+            "reentrancy": 0.0683,
+            "time_manipulation": 0.1844,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Oyente",
+          "metrics": {
+            "precision": 0.2222,
+            "recall": 0.1538,
+            "f1_score": 0.1818,
+            "execution_time_avg": 34.9
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0006,
+            "arithmetic": 0.0457,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0223,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "4",
+      "publication_date": null,
+      "dataset_profile": {
+        "dataset_name": "SolidiFI Benchmark",
+        "solc": [
+          "0.4.x",
+          "0.5.x"
+        ],
+        "contract_count_total": 350,
+        "realism_level": "synthetic",
+        "domain_tags": [
+          "token"
+        ],
+        "loc_profile": {
+          "loc_bin_counts_by_solc": {
+            "0-100": {
+              "0.4.x": 5,
+              "0.5.x": 8,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "100-200": {
+              "0.4.x": 16,
+              "0.5.x": 25,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "200-300": {
+              "0.4.x": 15,
+              "0.5.x": 78,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "300-400": {
+              "0.4.x": 14,
+              "0.5.x": 72,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "400-500": {
+              "0.4.x": 9,
+              "0.5.x": 46,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "500-600": {
+              "0.4.x": 3,
+              "0.5.x": 28,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "600-700": {
+              "0.4.x": 1,
+              "0.5.x": 15,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "700-800": {
+              "0.4.x": 0,
+              "0.5.x": 7,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "800-900": {
+              "0.4.x": 0,
+              "0.5.x": 3,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "900-1000": {
+              "0.4.x": 0,
+              "0.5.x": 3,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "1000+": {
+              "0.4.x": 0,
+              "0.5.x": 2,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            }
+          }
+        },
+        "complexity_stats": {
+          "avg_loc": 357.3,
+          "median_loc": 333.0,
+          "avg_functions": 51.6,
+          "avg_subcontracts": 5.2,
+          "vulnerability_categories": [
+            "access_control",
+            "arithmetic",
+            "denial_of_service",
+            "reentrancy",
+            "time_manipulation",
+            "front_running",
+            "bad_randomness",
+            "unchecked_low_level_calls",
+            "short_addresses"
+          ]
+        },
+        "what_contracts": null,
+        "how_collected": null,
+        "scale": null,
+        "labeling": null,
+        "target_vulnerabilities": [],
+        "label_granularity": null,
+        "label_count": null,
+        "label_count_basis": null
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "Securify2",
+          "metrics": {
+            "precision": 0.0229,
+            "recall": 0.5528,
+            "f1_score": 0.44,
+            "execution_time_avg": 509.1
+          },
+          "vulnerability_scores": {
+            "access_control": 0.5506,
+            "arithmetic": 0.0,
+            "denial_of_service": 0.6357,
+            "reentrancy": 0.1646,
+            "time_manipulation": 0.3248,
+            "front_running": 0.4581,
+            "bad_randomness": 0.0167,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Slither",
+          "metrics": {
+            "precision": 0.0316,
+            "recall": 0.4028,
+            "f1_score": 0.0586,
+            "execution_time_avg": 33.7
+          },
+          "vulnerability_scores": {
+            "access_control": 0.791,
+            "arithmetic": 0.005,
+            "denial_of_service": 0.0497,
+            "reentrancy": 0.8563,
+            "time_manipulation": 0.9728,
+            "front_running": 0.0,
+            "bad_randomness": 0.25,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Smartcheck",
+          "metrics": {
+            "precision": 0.0023,
+            "recall": 0.1077,
+            "f1_score": 0.0045,
+            "execution_time_avg": 5.0
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0345,
+            "arithmetic": 0.0005,
+            "denial_of_service": 0.0108,
+            "reentrancy": 0.1402,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0167,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Osiris",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 144.4
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0006,
+            "arithmetic": 0.1637,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0328,
+            "time_manipulation": 0.0035,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Manticore",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 17398.0
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0,
+            "arithmetic": 0.0,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Mythril",
+          "metrics": {
+            "precision": 0.0234,
+            "recall": 0.0092,
+            "f1_score": 0.0132,
+            "execution_time_avg": 1975.5
+          },
+          "vulnerability_scores": {
+            "access_control": 0.1599,
+            "arithmetic": 0.0221,
+            "denial_of_service": 0.0014,
+            "reentrancy": 0.0683,
+            "time_manipulation": 0.1844,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Oyente",
+          "metrics": {
+            "precision": 0.0294,
+            "recall": 0.0019,
+            "f1_score": 0.0036,
+            "execution_time_avg": 20.5
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0006,
+            "arithmetic": 0.0457,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0223,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "5",
+      "publication_date": null,
+      "dataset_profile": {
+        "dataset_name": "BNB Benchmark",
+        "solc": [
+          "0.4.x",
+          "0.5.x",
+          "0.6.x",
+          "0.7.x",
+          "0.8.x"
+        ],
+        "contract_count_total": 113,
+        "realism_level": "Real-world",
+        "domain_tags": [
+          "token"
+        ],
+        "loc_profile": {
+          "loc_bin_counts_by_solc": {
+            "0-100": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "100-200": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 1
+            },
+            "200-300": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "300-400": {
+              "0.4.x": 1,
+              "0.5.x": 2,
+              "0.6.x": 1,
+              "0.7.x": 0,
+              "0.8.x": 3
+            },
+            "400-500": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 4
+            },
+            "500-600": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 1,
+              "0.7.x": 0,
+              "0.8.x": 7
+            },
+            "600-700": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 5,
+              "0.7.x": 0,
+              "0.8.x": 3
+            },
+            "700-800": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 1,
+              "0.7.x": 0,
+              "0.8.x": 12
+            },
+            "800-900": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 3,
+              "0.7.x": 0,
+              "0.8.x": 9
+            },
+            "900-1000": {
+              "0.4.x": 2,
+              "0.5.x": 0,
+              "0.6.x": 4,
+              "0.7.x": 0,
+              "0.8.x": 3
+            },
+            "1000+": {
+              "0.4.x": 1,
+              "0.5.x": 1,
+              "0.6.x": 16,
+              "0.7.x": 1,
+              "0.8.x": 32
+            }
+          }
+        },
+        "complexity_stats": {
+          "avg_loc": 1050.8,
+          "median_loc": 912.0,
+          "avg_functions": 246.0,
+          "avg_subcontracts": 28.7,
+          "vulnerability_categories": [
+            "access_control",
+            "arithmetic",
+            "denial_of_service",
+            "reentrancy",
+            "time_manipulation",
+            "front_running",
+            "bad_randomness",
+            "unchecked_low_level_calls",
+            "short_addresses"
+          ]
+        },
+        "what_contracts": null,
+        "how_collected": null,
+        "scale": null,
+        "labeling": null,
+        "target_vulnerabilities": [],
+        "label_granularity": null,
+        "label_count": null,
+        "label_count_basis": null
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "Securify2",
+          "metrics": {
+            "precision": 0.18,
+            "recall": 0.303,
+            "f1_score": 0.2258,
+            "execution_time_avg": 47.7
+          },
+          "vulnerability_scores": {
+            "access_control": 0.5506,
+            "arithmetic": 0.0,
+            "denial_of_service": 0.6357,
+            "reentrancy": 0.1646,
+            "time_manipulation": 0.3248,
+            "front_running": 0.4581,
+            "bad_randomness": 0.0167,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Slither",
+          "metrics": {
+            "precision": 0.3064,
+            "recall": 0.8099,
+            "f1_score": 0.4446,
+            "execution_time_avg": 30.9
+          },
+          "vulnerability_scores": {
+            "access_control": 0.791,
+            "arithmetic": 0.005,
+            "denial_of_service": 0.0497,
+            "reentrancy": 0.8563,
+            "time_manipulation": 0.9728,
+            "front_running": 0.0,
+            "bad_randomness": 0.25,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Smartcheck",
+          "metrics": {
+            "precision": 0.0026,
+            "recall": 0.305,
+            "f1_score": 0.0052,
+            "execution_time_avg": 164.7
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0345,
+            "arithmetic": 0.0005,
+            "denial_of_service": 0.0108,
+            "reentrancy": 0.1402,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0167,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Osiris",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 11.1
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0006,
+            "arithmetic": 0.1637,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0328,
+            "time_manipulation": 0.0035,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Manticore",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 2839.2
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0,
+            "arithmetic": 0.0,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Mythril",
+          "metrics": {
+            "precision": 0.6833,
+            "recall": 0.3168,
+            "f1_score": 0.4329,
+            "execution_time_avg": 1924.2
+          },
+          "vulnerability_scores": {
+            "access_control": 0.1599,
+            "arithmetic": 0.0221,
+            "denial_of_service": 0.0014,
+            "reentrancy": 0.0683,
+            "time_manipulation": 0.1844,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        },
+        {
+          "tool_name": "Oyente",
+          "metrics": {
+            "precision": 0.0294,
+            "recall": 0.0019,
+            "f1_score": 0.0036,
+            "execution_time_avg": 13.8
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0006,
+            "arithmetic": 0.0457,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0223,
+            "time_manipulation": 0.0,
+            "front_running": 0.0,
+            "bad_randomness": 0.0,
+            "short_addresses": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "2.md",
+      "publication_date": null,
+      "dataset_profile": {
+        "dataset_name": "自建基准数据集",
+        "solc": [
+          "0.4.x",
+          "0.5.x",
+          "0.6.x",
+          "0.7.x",
+          "0.8.x"
+        ],
+        "contract_count_total": 110,
+        "realism_level": "Real-world",
+        "domain_tags": [
+          "智能合约",
+          "漏洞检测"
+        ],
+        "loc_profile": {
+          "loc_bin_counts_by_solc": {
+            "0-100": {
+              "0.4.x": 53,
+              "0.5.x": 7,
+              "0.6.x": 1,
+              "0.7.x": 1,
+              "0.8.x": 8
+            },
+            "100-200": {
+              "0.4.x": 12,
+              "0.5.x": 4,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 1
+            },
+            "200-300": {
+              "0.4.x": 3,
+              "0.5.x": 6,
+              "0.6.x": 1,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "300-400": {
+              "0.4.x": 3,
+              "0.5.x": 5,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "400-500": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "500-600": {
+              "0.4.x": 0,
+              "0.5.x": 1,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "600-700": {
+              "0.4.x": 0,
+              "0.5.x": 1,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "700-800": {
+              "0.4.x": 2,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "800-900": {
+              "0.4.x": 1,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "900-1000": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "1000+": {
+              "0.4.x": 0,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            }
+          }
+        },
+        "complexity_stats": {
+          "avg_loc": 123.9,
+          "median_loc": 52.5,
+          "avg_functions": 13.8,
+          "avg_subcontracts": 2.9,
+          "vulnerability_categories": []
+        },
+        "what_contracts": null,
+        "how_collected": null,
+        "scale": null,
+        "labeling": null,
+        "target_vulnerabilities": [],
+        "label_granularity": null,
+        "label_count": null,
+        "label_count_basis": null,
+        "has_labels": true
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "Llama-3.1-8b",
+          "metrics": {
+            "precision": 0.86,
+            "recall": 0.64,
+            "f1_score": 0.74,
+            "execution_time_avg": 47.0
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "表 5, 表 6"
+        },
+        {
+          "tool_name": "ConFuzzius",
+          "metrics": {
+            "precision": 0.93,
+            "recall": 0.42,
+            "f1_score": 0.58,
+            "execution_time_avg": 1089.0
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "表 5, 表 6"
+        },
+        {
+          "tool_name": "Conkas",
+          "metrics": {
+            "precision": 0.92,
+            "recall": 0.44,
+            "f1_score": 0.59,
+            "execution_time_avg": 2880.0
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "表 5, 表 6"
+        },
+        {
+          "tool_name": "Maian",
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.04,
+            "f1_score": 0.08,
+            "execution_time_avg": 57.0
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "表 5, 表 6"
+        },
+        {
+          "tool_name": "Manticore",
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.31,
+            "f1_score": 0.47,
+            "execution_time_avg": 662.0
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "表 5, 表 6"
+        },
+        {
+          "tool_name": "Mythril",
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.54,
+            "f1_score": 0.7,
+            "execution_time_avg": 257.0
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "表 5, 表 6"
+        },
+        {
+          "tool_name": "Osiris",
+          "metrics": {
+            "precision": 0.9,
+            "recall": 0.18,
+            "f1_score": 0.3,
+            "execution_time_avg": 92.0
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "表 5, 表 6"
+        },
+        {
+          "tool_name": "Oyente",
+          "metrics": {
+            "precision": 0.9,
+            "recall": 0.18,
+            "f1_score": 0.3,
+            "execution_time_avg": 4.0
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "表 5, 表 6"
+        },
+        {
+          "tool_name": "Securify",
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.1,
+            "f1_score": 0.18,
+            "execution_time_avg": 27.0
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "表 5, 表 6"
+        },
+        {
+          "tool_name": "sFuzz",
+          "metrics": {
+            "precision": 0.95,
+            "recall": 0.21,
+            "f1_score": 0.34,
+            "execution_time_avg": 1080.0
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "表 5, 表 6"
+        },
+        {
+          "tool_name": "Slither",
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.3,
+            "f1_score": 0.47,
+            "execution_time_avg": 1.0
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "表 5, 表 6"
+        },
+        {
+          "tool_name": "Smartcheck",
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.33,
+            "f1_score": 0.49,
+            "execution_time_avg": 3.0
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "表 5, 表 6"
+        },
+        {
+          "tool_name": "solhint",
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.34,
+            "f1_score": 0.51,
+            "execution_time_avg": 1.0
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "表 5, 表 6"
+        }
+      ]
+    },
+    {
+      "source_id": "smartbug2.0empirical",
+      "publication_date": null,
+      "dataset_profile": {
+        "dataset_name": "smartbug2.0empirical",
+        "solc": [
+          "0.4.x",
+          "0.5.x"
+        ],
+        "contract_count_total": 2181,
+        "realism_level": "synthetic",
+        "domain_tags": [
+          "token"
+        ],
+        "loc_profile": {
+          "loc_bin_counts_by_solc": {
+            "0-100": {
+              "0.4.x": 952,
+              "0.5.x": 1,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "100-200": {
+              "0.4.x": 637,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "200-300": {
+              "0.4.x": 232,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "300-400": {
+              "0.4.x": 111,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "400-500": {
+              "0.4.x": 58,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "500-600": {
+              "0.4.x": 31,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "600-700": {
+              "0.4.x": 33,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "700-800": {
+              "0.4.x": 19,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "800-900": {
+              "0.4.x": 11,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "900-1000": {
+              "0.4.x": 10,
+              "0.5.x": 0,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            },
+            "1000+": {
+              "0.4.x": 61,
+              "0.5.x": 1,
+              "0.6.x": 0,
+              "0.7.x": 0,
+              "0.8.x": 0
+            }
+          }
+        },
+        "complexity_stats": {
+          "avg_loc": 208.7,
+          "median_loc": 115.0,
+          "avg_functions": 18.8,
+          "avg_subcontracts": 6.6,
+          "vulnerability_categories": [
+            "access_control",
+            "arithmetic",
+            "denial_of_service",
+            "reentrancy",
+            "unchecked_low_level_calls",
+            "bad_randomness",
+            "front_running",
+            "time_manipulation",
+            "short_addresses"
+          ]
+        },
+        "what_contracts": null,
+        "how_collected": null,
+        "scale": null,
+        "labeling": null,
+        "target_vulnerabilities": [],
+        "label_granularity": null,
+        "label_count": null,
+        "label_count_basis": null
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "ConFuzzius",
+          "metrics": {
+            "precision": 0.1259,
+            "recall": 0.1333,
+            "f1_score": 0.1295,
+            "execution_time_avg": 545.31
+          },
+          "vulnerability_scores": {
+            "access_control": "1/92",
+            "arithmetic": "99/1405",
+            "denial_of_service": "0/257",
+            "reentrancy": "24/91",
+            "unchecked_low_level_calls": "0/583",
+            "bad_randomness": "0/38",
+            "front_running": "0/16",
+            "time_manipulation": "174/898",
+            "short_addresses": "0/1"
+          },
+          "evidence_source": "Table 10 (Arithm.)"
+        },
+        {
+          "tool_name": "Conkas",
+          "metrics": {
+            "precision": 0.1419,
+            "recall": 0.478,
+            "f1_score": 0.2189,
+            "execution_time_avg": 53.19
+          },
+          "vulnerability_scores": {
+            "access_control": "0/92",
+            "arithmetic": "904/1405",
+            "denial_of_service": "0/257",
+            "reentrancy": "47/91",
+            "unchecked_low_level_calls": "87/583",
+            "bad_randomness": "0/38",
+            "front_running": "2/16",
+            "time_manipulation": "254/898",
+            "short_addresses": "0/1"
+          },
+          "evidence_source": "Table 10 (Arithm.)"
+        },
+        {
+          "tool_name": "Ethainter",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 0.85
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "Table 10 (Arithm.)",
+          "note": "Not reported in paper ('-')"
+        },
+        {
+          "tool_name": "Ethor",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 10.41
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "Table 10 (Arithm.)",
+          "note": "Not reported in paper ('-')"
+        },
+        {
+          "tool_name": "Madmax",
+          "metrics": {
+            "precision": 0.125,
+            "recall": 0.0013,
+            "f1_score": 0.0026,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "0/92",
+            "arithmetic": "0/1405",
+            "denial_of_service": "2/257",
+            "reentrancy": "0/91",
+            "unchecked_low_level_calls": "0/583",
+            "bad_randomness": "0/38",
+            "front_running": "0/16",
+            "time_manipulation": "0/898",
+            "short_addresses": "0/1"
+          },
+          "evidence_source": "Table 10 (Arithm.)"
+        },
+        {
+          "tool_name": "Maian",
+          "metrics": {
+            "precision": 0.3333,
+            "recall": 0.0033,
+            "f1_score": 0.0065,
+            "execution_time_avg": 118.56
+          },
+          "vulnerability_scores": {
+            "access_control": "5/92",
+            "arithmetic": "0/1405",
+            "denial_of_service": "0/257",
+            "reentrancy": "0/91",
+            "unchecked_low_level_calls": "0/583",
+            "bad_randomness": "0/38",
+            "front_running": "0/16",
+            "time_manipulation": "0/898",
+            "short_addresses": "0/1"
+          },
+          "evidence_source": "Table 10 (Arithm.)"
+        },
+        {
+          "tool_name": "Manticore",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 739.69
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "Table 10 (Arithm.)",
+          "note": "Not reported in paper ('-')"
+        },
+        {
+          "tool_name": "Mythril",
+          "metrics": {
+            "precision": 0.1612,
+            "recall": 0.0743,
+            "f1_score": 0.0784,
+            "execution_time_avg": 361.2
+          },
+          "vulnerability_scores": {
+            "access_control": "23/92",
+            "arithmetic": "57/1405",
+            "denial_of_service": "2/257",
+            "reentrancy": "16/91",
+            "unchecked_low_level_calls": "56/583",
+            "bad_randomness": "0/38",
+            "front_running": "1/16",
+            "time_manipulation": "0/898",
+            "short_addresses": "0/1"
+          },
+          "evidence_source": "Table 10 (Arithm.)"
+        },
+        {
+          "tool_name": "Osiris",
+          "metrics": {
+            "precision": 0.2643,
+            "recall": 0.3714,
+            "f1_score": 0.3088,
+            "execution_time_avg": 97.75
+          },
+          "vulnerability_scores": {
+            "access_control": "0/92",
+            "arithmetic": "944/1405",
+            "denial_of_service": "0/257",
+            "reentrancy": "40/91",
+            "unchecked_low_level_calls": "0/583",
+            "bad_randomness": "0/38",
+            "front_running": "3/16",
+            "time_manipulation": "94/898",
+            "short_addresses": "0/1"
+          },
+          "evidence_source": "Table 10 (Arithm.)"
+        },
+        {
+          "tool_name": "Oyente",
+          "metrics": {
+            "precision": 0.0727,
+            "recall": 0.0806,
+            "f1_score": 0.0765,
+            "execution_time_avg": 16.79
+          },
+          "vulnerability_scores": {
+            "access_control": "0/92",
+            "arithmetic": "173/1405",
+            "denial_of_service": "0/257",
+            "reentrancy": "28/91",
+            "unchecked_low_level_calls": "0/583",
+            "bad_randomness": "0/38",
+            "front_running": "2/16",
+            "time_manipulation": "41/898",
+            "short_addresses": "0/1"
+          },
+          "evidence_source": "Table 10 (Arithm.)"
+        },
+        {
+          "tool_name": "Pakala",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 312.4
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "Table 10 (Arithm.)",
+          "note": "Not reported in paper ('-')"
+        },
+        {
+          "tool_name": "Securify",
+          "metrics": {
+            "precision": 0.2656,
+            "recall": 0.1348,
+            "f1_score": 0.1788,
+            "execution_time_avg": 102.92
+          },
+          "vulnerability_scores": {
+            "access_control": "2/92",
+            "arithmetic": "0/1405",
+            "denial_of_service": "0/257",
+            "reentrancy": "33/91",
+            "unchecked_low_level_calls": "245/583",
+            "bad_randomness": "0/38",
+            "front_running": "8/16",
+            "time_manipulation": "0/898",
+            "short_addresses": "0/1"
+          },
+          "evidence_source": "Table 10 (Arithm.)"
+        },
+        {
+          "tool_name": "Semgrep",
+          "metrics": {
+            "precision": 0.0012,
+            "recall": 0.0005,
+            "f1_score": 0.0007,
+            "execution_time_avg": 1.6
+          },
+          "vulnerability_scores": {
+            "access_control": "1/92",
+            "arithmetic": "0/1405",
+            "denial_of_service": "0/257",
+            "reentrancy": "0/91",
+            "unchecked_low_level_calls": "0/583",
+            "bad_randomness": "0/38",
+            "front_running": "0/16",
+            "time_manipulation": "0/898",
+            "short_addresses": "0/1"
+          },
+          "evidence_source": "Table 10 (Arithm.)"
+        },
+        {
+          "tool_name": "Slither",
+          "metrics": {
+            "precision": 0.1609,
+            "recall": 0.4416,
+            "f1_score": 0.2359,
+            "execution_time_avg": 1.14
+          },
+          "vulnerability_scores": {
+            "access_control": "19/92",
+            "arithmetic": "80/1405",
+            "denial_of_service": "59/257",
+            "reentrancy": "65/91",
+            "unchecked_low_level_calls": "289/583",
+            "bad_randomness": "4/38",
+            "front_running": "0/16",
+            "time_manipulation": "779/898",
+            "short_addresses": "0/1"
+          },
+          "evidence_source": "Table 10 (Arithm.)"
+        },
+        {
+          "tool_name": "sFuzz",
+          "metrics": {
+            "precision": 0.4491,
+            "recall": 0.3503,
+            "f1_score": 0.3936,
+            "execution_time_avg": 582.04
+          },
+          "vulnerability_scores": {
+            "access_control": "3/92",
+            "arithmetic": "458/1405",
+            "denial_of_service": "0/257",
+            "reentrancy": "29/91",
+            "unchecked_low_level_calls": "0/583",
+            "bad_randomness": "0/38",
+            "front_running": "0/16",
+            "time_manipulation": "378/898",
+            "short_addresses": "0/1"
+          },
+          "evidence_source": "Table 10 (Arithm.)"
+        },
+        {
+          "tool_name": "Smartcheck",
+          "metrics": {
+            "precision": 0.179,
+            "recall": 0.1719,
+            "f1_score": 0.1754,
+            "execution_time_avg": 1.86
+          },
+          "vulnerability_scores": {
+            "access_control": "14/92",
+            "arithmetic": "12/1405",
+            "denial_of_service": "195/257",
+            "reentrancy": "44/91",
+            "unchecked_low_level_calls": "204/583",
+            "bad_randomness": "0/38",
+            "front_running": "0/16",
+            "time_manipulation": "1/898",
+            "short_addresses": "0/1"
+          },
+          "evidence_source": "Table 10 (Arithm.)"
+        },
+        {
+          "tool_name": "solhint",
+          "metrics": {
+            "precision": 0.067,
+            "recall": 0.2599,
+            "f1_score": 0.1066,
+            "execution_time_avg": 0.94
+          },
+          "vulnerability_scores": {
+            "access_control": "33/92",
+            "arithmetic": "0/1405",
+            "denial_of_service": "0/257",
+            "reentrancy": "0/91",
+            "unchecked_low_level_calls": "267/583",
+            "bad_randomness": "17/38",
+            "front_running": "0/16",
+            "time_manipulation": "424/898",
+            "short_addresses": "0/1"
+          },
+          "evidence_source": "Table 10 (Arithm.)"
+        },
+        {
+          "tool_name": "Teether",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 1.5
+          },
+          "vulnerability_scores": null,
+          "evidence_source": "Table 10 (Arithm.)",
+          "note": "Not reported in paper ('-')"
+        },
+        {
+          "tool_name": "Vandal",
+          "metrics": {
+            "precision": 0.2848,
+            "recall": 0.2308,
+            "f1_score": 0.2549,
+            "execution_time_avg": 50.57
+          },
+          "vulnerability_scores": {
+            "access_control": "23/92",
+            "arithmetic": "0/1405",
+            "denial_of_service": "0/257",
+            "reentrancy": "55/91",
+            "unchecked_low_level_calls": "538/583",
+            "bad_randomness": "0/38",
+            "front_running": "0/16",
+            "time_manipulation": "0/898",
+            "short_addresses": "0/1"
+          },
+          "evidence_source": "Table 10 (Arithm.)"
+        }
+      ]
+    },
+    {
+      "source_id": "sast_dataset1",
+      "publication_date": "2024-01-01",
+      "dataset_profile": {
+        "dataset_name": "sast.dataset1",
+        "solc": [],
+        "contract_count_total": 788,
+        "realism_level": "final_benchmark",
+        "domain_tags": [],
+        "loc_profile": {},
+        "complexity_stats": null,
+        "what_contracts": "Open-source Solidity smart contract files with confirmed vulnerabilities. The final effectiveness benchmark contains 788 vulnerable contract files drawn from five source components after taxonomy mapping and validation.",
+        "how_collected": "The authors screened open-source Solidity datasets using availability, popularity/peer-review, and vulnerability-label criteria, retaining Not So Smart Contracts, SmartBugs-Curated, SolidiFI Benchmark, and Smart Contract Benchmark Suites. They also collected 2,941 representative BNB projects from BscScan and manually audited them with three security experts to construct the BNB Benchmark. Across the five components, files were deduplicated via MD5 after removing blank lines and comments, and the ground truth was manually relabeled and remapped to the new taxonomy at function level.",
+        "scale": "788 vulnerable contract files in the final effectiveness benchmark; 10,394 ground-truth vulnerability instances; covers 40 of 45 taxonomy types.",
+        "labeling": "Manual function-level relabeling and taxonomy mapping with cross-validation by three security auditing experts. Source datasets originally varied in taxonomy and sometimes only labeled at file level; the authors normalized all retained benchmark data to function-level labels.",
+        "target_vulnerabilities": [
+          "Access Control",
+          "Arithmetic",
+          "Block Manipulation",
+          "Cryptographic",
+          "Denial of Services",
+          "Reentrancy",
+          "Storage & Memory"
+        ],
+        "label_granularity": "Function-level vulnerability labels.",
+        "label_count": 10394,
+        "label_count_basis": "Total number of ground-truth vulnerability instances across the 788 vulnerable contract files in the final benchmark.",
+        "paper_dataset_name": "Authors' smart contract vulnerability benchmark"
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "securify2",
+          "metrics": {
+            "precision": null,
+            "recall": 0.3492,
+            "f1_score": null,
+            "execution_time_avg": null,
+            "success_count": 247,
+            "success_rate": 0.3135,
+            "timeout_count": 38,
+            "compilation_failure_count": 503,
+            "failure_count": 541,
+            "execution_time_avg_average_s": 49.7,
+            "execution_time_avg_total_s": 446741.0
+          },
+          "vulnerability_scores": {
+            "access_control": 0.5506,
+            "arithmetic": 0.0,
+            "denial_of_service": 0.6357,
+            "reentrancy": 0.1646
+          }
+        },
+        {
+          "tool_name": "slither",
+          "metrics": {
+            "precision": 0.0123,
+            "recall": 0.3618,
+            "f1_score": 0.0238,
+            "execution_time_avg": null,
+            "success_count": 767,
+            "success_rate": 0.9734,
+            "timeout_count": 2,
+            "compilation_failure_count": 19,
+            "failure_count": 21,
+            "execution_time_avg_average_s": 16.6,
+            "execution_time_avg_total_s": 149165.3
+          },
+          "vulnerability_scores": {
+            "access_control": 0.791,
+            "arithmetic": 0.005,
+            "denial_of_service": 0.0497,
+            "reentrancy": 0.8563
+          }
+        },
+        {
+          "tool_name": "smartcheck",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": null,
+            "execution_time_avg": null,
+            "success_count": 788,
+            "success_rate": 1.0,
+            "timeout_count": 0,
+            "compilation_failure_count": 0,
+            "failure_count": 0,
+            "execution_time_avg_average_s": 112.7,
+            "execution_time_avg_total_s": 1012242.0
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0345,
+            "arithmetic": 0.0005,
+            "denial_of_service": 0.0108,
+            "reentrancy": 0.1402
+          }
+        },
+        {
+          "tool_name": "manticore",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "success_count": 112,
+            "success_rate": 0.1421,
+            "timeout_count": 626,
+            "compilation_failure_count": 50,
+            "failure_count": 676,
+            "execution_time_avg_average_s": 1547.6,
+            "execution_time_avg_total_s": 13898788.1
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0,
+            "arithmetic": 0.0,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0
+          }
+        },
+        {
+          "tool_name": "mythril",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": null,
+            "execution_time_avg": null,
+            "success_count": 590,
+            "success_rate": 0.7487,
+            "timeout_count": 193,
+            "compilation_failure_count": 0,
+            "failure_count": 193,
+            "execution_time_avg_average_s": 579.0,
+            "execution_time_avg_total_s": 5199823.6
+          },
+          "vulnerability_scores": {
+            "access_control": 0.1599,
+            "arithmetic": 0.0221,
+            "denial_of_service": 0.0014,
+            "reentrancy": 0.0683
+          }
+        },
+        {
+          "tool_name": "osiris",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": null,
+            "execution_time_avg": null,
+            "success_count": 451,
+            "success_rate": 0.5723,
+            "timeout_count": 35,
+            "compilation_failure_count": 302,
+            "failure_count": 337,
+            "execution_time_avg_average_s": 51.7,
+            "execution_time_avg_total_s": 464279.6
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0006,
+            "arithmetic": 0.1637,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0328
+          }
+        },
+        {
+          "tool_name": "oyente",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": null,
+            "execution_time_avg": null,
+            "success_count": 499,
+            "success_rate": 0.6332,
+            "timeout_count": 57,
+            "compilation_failure_count": 232,
+            "failure_count": 289,
+            "execution_time_avg_average_s": 13.2,
+            "execution_time_avg_total_s": 118301.1
+          },
+          "vulnerability_scores": {
+            "access_control": 0.0006,
+            "arithmetic": 0.0457,
+            "denial_of_service": 0.0,
+            "reentrancy": 0.0223
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "largescale_mineru_dataset4",
+      "publication_date": "2024-01-01",
+      "dataset_profile": {
+        "dataset_name": "largescale_mineru.dataset4",
+        "solc": [],
+        "contract_count_total": 373,
+        "realism_level": "ground_truth_dataset",
+        "domain_tags": [],
+        "loc_profile": {},
+        "complexity_stats": null,
+        "what_contracts": "Smart contract source codes with vulnerabilities confirmed through public security audit reports; available source codes were also compiled to support bytecode analysis.",
+        "how_collected": "Assembled from publicly available audit repositories maintained by Quantstamp, OpenZeppelin, Trail of Bits, ConsenSys, and CertiK, then mapped into vulnerability categories for benchmarking.",
+        "scale": "373 unique smart contract source codes.",
+        "labeling": "Ground truth derived from external professional security audits. Source-code-based analysis was limited in practice; the paper's reported effectiveness results on AGT are primarily bytecode-based.",
+        "target_vulnerabilities": [
+          "Reentrancy",
+          "Arithmetic Bugs",
+          "Unchecked Call",
+          "Transaction Order Dependency",
+          "Time Dependency"
+        ],
+        "label_granularity": "Contract-level vulnerability-category labels derived from audit findings.",
+        "label_count": 373,
+        "label_count_basis": "Number of audited smart contract source codes included in the AGT benchmark.",
+        "paper_dataset_name": "Audits Ground Truth (AGT)"
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "vandal",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.51,
+            "execution_time_avg": null,
+            "representation": "bytecode",
+            "vulnerability_evaluated": "unchecked_call",
+            "tn": 87.0,
+            "fp": 31.0,
+            "fn": 31.0,
+            "tp": 36.0,
+            "swc": "104",
+            "f1": 0.4,
+            "tn_unchecked_call_104": 52.0,
+            "fp_unchecked_call_104": 28.0,
+            "fn_unchecked_call_104": 90.0,
+            "tp_unchecked_call_104": 62.0,
+            "f1_unchecked_call_104": 0.51,
+            "accuracy_unchecked_call_104": 0.49
+          },
+          "vulnerability_scores": {
+            "reentrancy": 0.4,
+            "unchecked_call": 0.51
+          }
+        },
+        {
+          "tool_name": "oyente",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "representation": "bytecode",
+            "vulnerability_evaluated": "time_dependency",
+            "tn": 165.0,
+            "fp": 0.0,
+            "fn": 67.0,
+            "tp": 0.0,
+            "swc": "116",
+            "f1": 0.0,
+            "tn_tod_114": 216.0,
+            "fp_tod_114": 0.0,
+            "fn_tod_114": 16.0,
+            "tp_tod_114": 0.0,
+            "f1_tod_114": 0.0,
+            "accuracy_tod_114": 0.93,
+            "tn_time_dependency_116": 220.0,
+            "fp_time_dependency_116": 0.0,
+            "fn_time_dependency_116": 12.0,
+            "tp_time_dependency_116": 0.0,
+            "f1_time_dependency_116": 0.0,
+            "accuracy_time_dependency_116": 0.95
+          },
+          "vulnerability_scores": {
+            "reentrancy": 0.0,
+            "transaction_order_dependency": 0.0,
+            "time_dependency": 0.0
+          }
+        },
+        {
+          "tool_name": "mythril",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.18,
+            "execution_time_avg": null,
+            "representation": "bytecode",
+            "vulnerability_evaluated": "time_dependency",
+            "tn": 163.0,
+            "fp": 2.0,
+            "fn": 67.0,
+            "tp": 0.0,
+            "swc": "116",
+            "f1": 0.0,
+            "tn_int_over_underflow_101": 187.0,
+            "fp_int_over_underflow_101": 18.0,
+            "fn_int_over_underflow_101": 25.0,
+            "tp_int_over_underflow_101": 2.0,
+            "f1_int_over_underflow_101": 0.09,
+            "accuracy_int_over_underflow_101": 0.81,
+            "tn_time_dependency_116": 202.0,
+            "fp_time_dependency_116": 18.0,
+            "fn_time_dependency_116": 9.0,
+            "tp_time_dependency_116": 3.0,
+            "f1_time_dependency_116": 0.18,
+            "accuracy_time_dependency_116": 0.88
+          },
+          "vulnerability_scores": {
+            "reentrancy": 0.0,
+            "arithmetic_bugs": 0.09,
+            "time_dependency": 0.18
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "largescale_mineru_dataset3",
+      "publication_date": "2024-01-01",
+      "dataset_profile": {
+        "dataset_name": "largescale_mineru.dataset3",
+        "solc": [],
+        "contract_count_total": 13773,
+        "realism_level": "ground_truth_dataset",
+        "domain_tags": [],
+        "loc_profile": {},
+        "complexity_stats": null,
+        "what_contracts": "Deduplicated smart contract source files derived from SmartBugs Wild, with deployed bytecode retrieved by address for bytecode-based evaluation.",
+        "how_collected": "Started from the SmartBugs Wild Dataset, removed duplicates and near-duplicates through AST-based normalization and hashing, then manually inspected contracts containing call/send/transfer patterns and annotated reentrancy conditions.",
+        "scale": "47,398 initial SmartBugs Wild source codes; 22,237 after preprocessing/deduplication; 13,773 manually labeled contracts in the final benchmark.",
+        "labeling": "Manual expert annotation over more than four person-months by two master students supervised by a Ph.D. student. The benchmark labels reentrancy with subtype awareness for call, send, and transfer; contracts lacking these subtypes were considered non-vulnerable.",
+        "target_vulnerabilities": [
+          "Reentrancy"
+        ],
+        "label_granularity": "Contract-level labels, with evaluation slices for call-only reentrancy and all-subtype reentrancy (call, send, transfer), on both source code and deployed bytecode representations.",
+        "label_count": 13773,
+        "label_count_basis": "Number of manually labeled smart contracts in the final RGT benchmark.",
+        "paper_dataset_name": "Reentrancy Ground Truth (RGT)"
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "osiris",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.21,
+            "execution_time_avg": null,
+            "representation": "source_code",
+            "reentrancy_scope": "all_subtypes_call_send_transfer",
+            "tn": 1257,
+            "fp": 46,
+            "fn": 582,
+            "tp": 84
+          },
+          "vulnerability_scores": {
+            "reentrancy": 0.21
+          }
+        },
+        {
+          "tool_name": "confuzzius",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.1,
+            "execution_time_avg": null,
+            "representation": "source_code",
+            "reentrancy_scope": "all_subtypes_call_send_transfer",
+            "tn": 2484,
+            "fp": 14,
+            "fn": 631,
+            "tp": 37
+          },
+          "vulnerability_scores": {
+            "reentrancy": 0.1
+          }
+        },
+        {
+          "tool_name": "smartian",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.04,
+            "execution_time_avg": null,
+            "representation": "source_code",
+            "reentrancy_scope": "all_subtypes_call_send_transfer",
+            "tn": 1931,
+            "fp": 2,
+            "fn": 516,
+            "tp": 11
+          },
+          "vulnerability_scores": {
+            "reentrancy": 0.04
+          }
+        },
+        {
+          "tool_name": "mythril",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "representation": "bytecode",
+            "reentrancy_scope": "all_subtypes_call_send_transfer",
+            "tn": 5029.0,
+            "fp": 1.0,
+            "fn": 1376.0,
+            "tp": 0.0,
+            "f1": 0.0
+          },
+          "vulnerability_scores": {
+            "reentrancy": 0.0
+          }
+        },
+        {
+          "tool_name": "sfuzz",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.1,
+            "execution_time_avg": null,
+            "representation": "source_code",
+            "reentrancy_scope": "all_subtypes_call_send_transfer",
+            "tn": 411,
+            "fp": 17,
+            "fn": 240,
+            "tp": 14
+          },
+          "vulnerability_scores": {
+            "reentrancy": 0.1
+          }
+        },
+        {
+          "tool_name": "oyente",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.08,
+            "execution_time_avg": null,
+            "representation": "bytecode",
+            "reentrancy_scope": "all_subtypes_call_send_transfer",
+            "tn": 4995.0,
+            "fp": 35.0,
+            "fn": 1317.0,
+            "tp": 59.0,
+            "f1": 0.08
+          },
+          "vulnerability_scores": {
+            "reentrancy": 0.08
+          }
+        },
+        {
+          "tool_name": "slither",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.73,
+            "execution_time_avg": null,
+            "representation": "source_code",
+            "reentrancy_scope": "all_subtypes_call_send_transfer",
+            "tn": 4324,
+            "fp": 704,
+            "fn": 186,
+            "tp": 1190
+          },
+          "vulnerability_scores": {
+            "reentrancy": 0.73
+          }
+        },
+        {
+          "tool_name": "securify2",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.61,
+            "execution_time_avg": null,
+            "representation": "source_code",
+            "reentrancy_scope": "all_subtypes_call_send_transfer",
+            "tn": 592,
+            "fp": 24,
+            "fn": 15,
+            "tp": 31
+          },
+          "vulnerability_scores": {
+            "reentrancy": 0.61
+          }
+        },
+        {
+          "tool_name": "mando-hgt",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.31,
+            "execution_time_avg": null,
+            "representation": "source_code",
+            "reentrancy_scope": "all_subtypes_call_send_transfer",
+            "tn": 321,
+            "fp": 3510,
+            "fn": 15,
+            "tp": 798
+          },
+          "vulnerability_scores": {
+            "reentrancy": 0.31
+          }
+        },
+        {
+          "tool_name": "vandal",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.4,
+            "execution_time_avg": null,
+            "representation": "bytecode",
+            "reentrancy_scope": "all_subtypes_call_send_transfer",
+            "tn": 3194.0,
+            "fp": 1836.0,
+            "fn": 575.0,
+            "tp": 801.0,
+            "f1": 0.4
+          },
+          "vulnerability_scores": {
+            "reentrancy": 0.4
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "largescale_mineru_dataset1",
+      "publication_date": "2024-01-01",
+      "dataset_profile": {
+        "dataset_name": "largescale_mineru.dataset1",
+        "solc": [],
+        "contract_count_total": 77219,
+        "realism_level": "evaluation_dataset",
+        "domain_tags": [],
+        "loc_profile": {},
+        "complexity_stats": null,
+        "what_contracts": "Unique deduplicated Solidity smart contract source codes collected from Ethereum-related deployments.",
+        "how_collected": "Contract addresses were gathered via Google BigQuery. Source code was then downloaded from Etherscan or recovered from IPFS links embedded in contract bytecode metadata. Contracts were deduplicated by hashing smart contracts.",
+        "scale": "77,219 unique deduplicated Solidity source codes.",
+        "labeling": "Unlabeled; used for quantitative overlap/disagreement analysis across scanners rather than supervised ground-truth benchmarking.",
+        "target_vulnerabilities": [
+          "Suicide",
+          "Reentrancy",
+          "Transaction Order Dependency",
+          "Arithmetic Bugs",
+          "txOrigin",
+          "Time Dependency",
+          "Locked Ether",
+          "DelegateCall"
+        ],
+        "label_granularity": null,
+        "label_count": null,
+        "label_count_basis": null,
+        "paper_dataset_name": "Source Code Dataset (SCD)"
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "osiris",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.21,
+            "execution_time_avg": null,
+            "tn": 1257.0,
+            "fp": 46.0,
+            "fn": 582.0,
+            "tp": 84.0
+          },
+          "vulnerability_scores": {}
+        },
+        {
+          "tool_name": "confuzzius",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.1,
+            "execution_time_avg": null,
+            "tn": 2484.0,
+            "fp": 14.0,
+            "fn": 631.0,
+            "tp": 37.0
+          },
+          "vulnerability_scores": {}
+        },
+        {
+          "tool_name": "smartian",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.04,
+            "execution_time_avg": null,
+            "tn": 1931.0,
+            "fp": 2.0,
+            "fn": 516.0,
+            "tp": 11.0
+          },
+          "vulnerability_scores": {}
+        },
+        {
+          "tool_name": "mythril",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.24,
+            "execution_time_avg": null,
+            "tn": 3517.0,
+            "fp": 298.0,
+            "fn": 850.0,
+            "tp": 183.0
+          },
+          "vulnerability_scores": {}
+        },
+        {
+          "tool_name": "sfuzz",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.1,
+            "execution_time_avg": null,
+            "tn": 411.0,
+            "fp": 17.0,
+            "fn": 240.0,
+            "tp": 14.0
+          },
+          "vulnerability_scores": {}
+        },
+        {
+          "tool_name": "oyente",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tn": 2279.0,
+            "fp": 0.0,
+            "fn": 744.0,
+            "tp": 1.0
+          },
+          "vulnerability_scores": {}
+        },
+        {
+          "tool_name": "slither",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.73,
+            "execution_time_avg": null,
+            "tn": 4324.0,
+            "fp": 704.0,
+            "fn": 186.0,
+            "tp": 1190.0
+          },
+          "vulnerability_scores": {}
+        },
+        {
+          "tool_name": "securify2",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.61,
+            "execution_time_avg": null,
+            "tn": 592.0,
+            "fp": 24.0,
+            "fn": 15.0,
+            "tp": 31.0
+          },
+          "vulnerability_scores": {}
+        },
+        {
+          "tool_name": "mando-hgt",
+          "metrics": {
+            "precision": null,
+            "recall": null,
+            "f1_score": 0.31,
+            "execution_time_avg": null,
+            "tn": 321.0,
+            "fp": 3510.0,
+            "fn": 15.0,
+            "tp": 798.0
+          },
+          "vulnerability_scores": {}
+        }
+      ]
+    },
+    {
+      "source_id": "lakasingle_merged_by_lines_0_500_0_4_x",
+      "publication_date": null,
+      "dataset_profile": {
+        "dataset_name": "lakasingle_merged_by_lines_0_500_0_4_x",
+        "solc": [
+          "0.4.x"
+        ],
+        "contract_count_total": 70,
+        "realism_level": "real_world",
+        "domain_tags": [
+          "token"
+        ],
+        "loc_profile": {
+          "loc_bin_counts_by_solc": {
+            "0-100": {
+              "0.4.x": 5
+            },
+            "100-200": {
+              "0.4.x": 23
+            },
+            "200-300": {
+              "0.4.x": 33
+            },
+            "300-400": {
+              "0.4.x": 9
+            },
+            "400-500": {
+              "0.4.x": 0
+            },
+            "500-600": {
+              "0.4.x": 0
+            },
+            "600-700": {
+              "0.4.x": 0
+            },
+            "700-800": {
+              "0.4.x": 0
+            },
+            "800-900": {
+              "0.4.x": 0
+            },
+            "900-1000": {
+              "0.4.x": 0
+            },
+            "1000+": {
+              "0.4.x": 0
+            }
+          }
+        },
+        "complexity_stats": {
+          "avg_loc": 211.0,
+          "median_loc": 204.5,
+          "avg_functions": 27.0,
+          "avg_subcontracts": 9.4,
+          "vulnerability_categories": [
+            "access_control",
+            "arithmetic",
+            "bad_randomness",
+            "denial_of_service",
+            "front_running",
+            "other",
+            "reentrancy",
+            "time_manipulation",
+            "unchecked_low_level_calls"
+          ]
+        },
+        "what_contracts": "Contracts from lakasingle_merged_by_lines/lines_0-500/0.4.x",
+        "how_collected": "Derived from local contract corpus and existing out/* tool reports.",
+        "scale": "70 contracts",
+        "labeling": "Ground truth derived from LAKresult CWE labels mapped to DASP categories via local mapping files.",
+        "target_vulnerabilities": [
+          "access_control",
+          "arithmetic",
+          "bad_randomness",
+          "denial_of_service",
+          "front_running",
+          "other",
+          "reentrancy",
+          "time_manipulation",
+          "unchecked_low_level_calls"
+        ],
+        "label_granularity": "contract-level",
+        "label_count": 135,
+        "label_count_basis": "contract-level DASP category labels; vulnerability_scores are TP/GT per category"
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "confuzzius",
+          "metrics": {
+            "precision": 0.2182,
+            "recall": 0.0889,
+            "f1_score": 0.1263,
+            "execution_time_avg": null,
+            "tp": 12.0,
+            "fp": 43.0,
+            "fn": 123.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/43",
+            "arithmetic": "11/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "1/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "conkas",
+          "metrics": {
+            "precision": 0.1724,
+            "recall": 0.0741,
+            "f1_score": 0.1036,
+            "execution_time_avg": null,
+            "tp": 10.0,
+            "fp": 48.0,
+            "fn": 125.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/43",
+            "arithmetic": "8/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "2/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "gptscan",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 1.0,
+            "fn": 135.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/43",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "honeybadger",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 135.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/43",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "maian",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 135.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/43",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "mando-hgt",
+          "metrics": {
+            "precision": 0.1406,
+            "recall": 0.2667,
+            "f1_score": 0.1841,
+            "execution_time_avg": null,
+            "tp": 36.0,
+            "fp": 220.0,
+            "fn": 99.0
+          },
+          "vulnerability_scores": {
+            "access_control": "5/43",
+            "arithmetic": "9/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "5/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "3/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "14/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "manticore",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 135.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/43",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "mythril",
+          "metrics": {
+            "precision": 0.2344,
+            "recall": 0.1111,
+            "f1_score": 0.1508,
+            "execution_time_avg": null,
+            "tp": 15.0,
+            "fp": 49.0,
+            "fn": 120.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/43",
+            "arithmetic": "7/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "1/6",
+            "front_running": "0/0",
+            "other": "7/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "osiris",
+          "metrics": {
+            "precision": 0.4062,
+            "recall": 0.0963,
+            "f1_score": 0.1557,
+            "execution_time_avg": null,
+            "tp": 13.0,
+            "fp": 19.0,
+            "fn": 122.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/43",
+            "arithmetic": "13/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "oyente",
+          "metrics": {
+            "precision": 0.2444,
+            "recall": 0.0815,
+            "f1_score": 0.1222,
+            "execution_time_avg": null,
+            "tp": 11.0,
+            "fp": 34.0,
+            "fn": 124.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/43",
+            "arithmetic": "11/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "sailfish",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 4.0,
+            "fn": 135.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/43",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "securify",
+          "metrics": {
+            "precision": 0.4848,
+            "recall": 0.1185,
+            "f1_score": 0.1905,
+            "execution_time_avg": null,
+            "tp": 16.0,
+            "fp": 17.0,
+            "fn": 119.0
+          },
+          "vulnerability_scores": {
+            "access_control": "16/43",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "securify2",
+          "metrics": {
+            "precision": 0.5,
+            "recall": 0.0222,
+            "f1_score": 0.0426,
+            "execution_time_avg": null,
+            "tp": 3.0,
+            "fp": 3.0,
+            "fn": 132.0
+          },
+          "vulnerability_scores": {
+            "access_control": "1/43",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "2/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "sfuzz",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 135.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/43",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "slither",
+          "metrics": {
+            "precision": 0.4714,
+            "recall": 0.2444,
+            "f1_score": 0.322,
+            "execution_time_avg": null,
+            "tp": 33.0,
+            "fp": 37.0,
+            "fn": 102.0
+          },
+          "vulnerability_scores": {
+            "access_control": "24/43",
+            "arithmetic": "3/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "1/6",
+            "front_running": "0/0",
+            "other": "4/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "1/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "smartcheck",
+          "metrics": {
+            "precision": 0.3778,
+            "recall": 0.1259,
+            "f1_score": 0.1889,
+            "execution_time_avg": null,
+            "tp": 17.0,
+            "fp": 28.0,
+            "fn": 118.0
+          },
+          "vulnerability_scores": {
+            "access_control": "6/43",
+            "arithmetic": "2/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "2/6",
+            "front_running": "0/0",
+            "other": "6/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "1/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "smartian",
+          "metrics": {
+            "precision": 0.0556,
+            "recall": 0.0074,
+            "f1_score": 0.0131,
+            "execution_time_avg": null,
+            "tp": 1.0,
+            "fp": 17.0,
+            "fn": 134.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/43",
+            "arithmetic": "1/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "solhint",
+          "metrics": {
+            "precision": 0.4375,
+            "recall": 0.0519,
+            "f1_score": 0.0927,
+            "execution_time_avg": null,
+            "tp": 7.0,
+            "fp": 9.0,
+            "fn": 128.0
+          },
+          "vulnerability_scores": {
+            "access_control": "7/43",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "0/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "vandal",
+          "metrics": {
+            "precision": 0.2653,
+            "recall": 0.0963,
+            "f1_score": 0.1413,
+            "execution_time_avg": null,
+            "tp": 13.0,
+            "fp": 36.0,
+            "fn": 122.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/43",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/6",
+            "front_running": "0/0",
+            "other": "0/31",
+            "reentrancy": "2/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "11/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "vulhunter",
+          "metrics": {
+            "precision": 0.3028,
+            "recall": 0.563,
+            "f1_score": 0.3938,
+            "execution_time_avg": null,
+            "tp": 76.0,
+            "fp": 175.0,
+            "fn": 59.0
+          },
+          "vulnerability_scores": {
+            "access_control": "25/43",
+            "arithmetic": "19/23",
+            "bad_randomness": "0/1",
+            "denial_of_service": "3/6",
+            "front_running": "0/0",
+            "other": "22/31",
+            "reentrancy": "0/3",
+            "time_manipulation": "0/1",
+            "unchecked_low_level_calls": "7/27"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.4.x; vulnerability_scores use per-category TP/GT."
+        }
+      ]
+    },
+    {
+      "source_id": "lakasingle_merged_by_lines_0_500_0_8_x_0_100",
+      "publication_date": null,
+      "dataset_profile": {
+        "dataset_name": "lakasingle_merged_by_lines_0_500_0_8_x_0_100",
+        "solc": [
+          "0.8.x"
+        ],
+        "contract_count_total": 29,
+        "realism_level": "real_world",
+        "domain_tags": [
+          "token"
+        ],
+        "loc_profile": {
+          "loc_bin_counts_by_solc": {
+            "0-100": {
+              "0.8.x": 29
+            },
+            "100-200": {
+              "0.8.x": 0
+            },
+            "200-300": {
+              "0.8.x": 0
+            },
+            "300-400": {
+              "0.8.x": 0
+            },
+            "400-500": {
+              "0.8.x": 0
+            },
+            "500-600": {
+              "0.8.x": 0
+            },
+            "600-700": {
+              "0.8.x": 0
+            },
+            "700-800": {
+              "0.8.x": 0
+            },
+            "800-900": {
+              "0.8.x": 0
+            },
+            "900-1000": {
+              "0.8.x": 0
+            },
+            "1000+": {
+              "0.8.x": 0
+            }
+          }
+        },
+        "complexity_stats": {
+          "avg_loc": 51.2069,
+          "median_loc": 47.0,
+          "avg_functions": 4.3103,
+          "avg_subcontracts": 1.1724,
+          "vulnerability_categories": [
+            "access_control",
+            "arithmetic",
+            "bad_randomness",
+            "denial_of_service",
+            "front_running",
+            "other",
+            "reentrancy",
+            "time_manipulation",
+            "unchecked_low_level_calls"
+          ]
+        },
+        "what_contracts": "Contracts from lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100",
+        "how_collected": "Derived from local contract corpus and existing out/* tool reports.",
+        "scale": "29 contracts",
+        "labeling": "Ground truth derived from LAKresult CWE labels mapped to DASP categories via local mapping files.",
+        "target_vulnerabilities": [
+          "access_control",
+          "arithmetic",
+          "bad_randomness",
+          "denial_of_service",
+          "front_running",
+          "other",
+          "reentrancy",
+          "time_manipulation",
+          "unchecked_low_level_calls"
+        ],
+        "label_granularity": "contract-level",
+        "label_count": 21,
+        "label_count_basis": "contract-level DASP category labels; vulnerability_scores are TP/GT per category"
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "confuzzius",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "conkas",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "gptscan",
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.0476,
+            "f1_score": 0.0909,
+            "execution_time_avg": null,
+            "tp": 1.0,
+            "fp": 0.0,
+            "fn": 20.0
+          },
+          "vulnerability_scores": {
+            "access_control": "1/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "honeybadger",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "maian",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "mando-hgt",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 24.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "manticore",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "mythril",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "osiris",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "oyente",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "sailfish",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "securify",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "securify2",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "sfuzz",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "slither",
+          "metrics": {
+            "precision": 0.1111,
+            "recall": 0.0476,
+            "f1_score": 0.0667,
+            "execution_time_avg": null,
+            "tp": 1.0,
+            "fp": 8.0,
+            "fn": 20.0
+          },
+          "vulnerability_scores": {
+            "access_control": "1/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "smartcheck",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 1.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "smartian",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "solhint",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 7.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "vandal",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 21.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "0/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "vulhunter",
+          "metrics": {
+            "precision": 0.5,
+            "recall": 0.0952,
+            "f1_score": 0.16,
+            "execution_time_avg": null,
+            "tp": 2.0,
+            "fp": 2.0,
+            "fn": 19.0
+          },
+          "vulnerability_scores": {
+            "access_control": "1/6",
+            "arithmetic": "0/2",
+            "bad_randomness": "0/0",
+            "denial_of_service": "0/1",
+            "front_running": "0/0",
+            "other": "1/9",
+            "reentrancy": "0/0",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/3"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_0-500/0.8.x_0-100; vulnerability_scores use per-category TP/GT."
+        }
+      ]
+    },
+    {
+      "source_id": "lakasingle_merged_by_lines_500_plus_0_4_x",
+      "publication_date": null,
+      "dataset_profile": {
+        "dataset_name": "lakasingle_merged_by_lines_500_plus_0_4_x",
+        "solc": [
+          "0.4.x"
+        ],
+        "contract_count_total": 30,
+        "realism_level": "real_world",
+        "domain_tags": [
+          "token",
+          "defi"
+        ],
+        "loc_profile": {
+          "loc_bin_counts_by_solc": {
+            "0-100": {
+              "0.4.x": 0
+            },
+            "100-200": {
+              "0.4.x": 0
+            },
+            "200-300": {
+              "0.4.x": 6
+            },
+            "300-400": {
+              "0.4.x": 3
+            },
+            "400-500": {
+              "0.4.x": 0
+            },
+            "500-600": {
+              "0.4.x": 7
+            },
+            "600-700": {
+              "0.4.x": 10
+            },
+            "700-800": {
+              "0.4.x": 1
+            },
+            "800-900": {
+              "0.4.x": 0
+            },
+            "900-1000": {
+              "0.4.x": 2
+            },
+            "1000+": {
+              "0.4.x": 1
+            }
+          }
+        },
+        "complexity_stats": {
+          "avg_loc": 553.6,
+          "median_loc": 585.5,
+          "avg_functions": 40.7,
+          "avg_subcontracts": 18.2,
+          "vulnerability_categories": [
+            "access_control",
+            "arithmetic",
+            "bad_randomness",
+            "denial_of_service",
+            "front_running",
+            "other",
+            "reentrancy",
+            "time_manipulation",
+            "unchecked_low_level_calls"
+          ]
+        },
+        "what_contracts": "Contracts from lakasingle_merged_by_lines/lines_500+/0.4.x",
+        "how_collected": "Derived from local contract corpus and existing out/* tool reports.",
+        "scale": "30 contracts",
+        "labeling": "Ground truth derived from LAKresult CWE labels mapped to DASP categories via local mapping files.",
+        "target_vulnerabilities": [
+          "access_control",
+          "arithmetic",
+          "bad_randomness",
+          "denial_of_service",
+          "front_running",
+          "other",
+          "reentrancy",
+          "time_manipulation",
+          "unchecked_low_level_calls"
+        ],
+        "label_granularity": "contract-level",
+        "label_count": 62,
+        "label_count_basis": "contract-level DASP category labels; vulnerability_scores are TP/GT per category"
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "confuzzius",
+          "metrics": {
+            "precision": 0.1034,
+            "recall": 0.0484,
+            "f1_score": 0.0659,
+            "execution_time_avg": null,
+            "tp": 3.0,
+            "fp": 26.0,
+            "fn": 59.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/16",
+            "arithmetic": "2/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "1/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "conkas",
+          "metrics": {
+            "precision": 0.2286,
+            "recall": 0.129,
+            "f1_score": 0.1649,
+            "execution_time_avg": null,
+            "tp": 8.0,
+            "fp": 27.0,
+            "fn": 54.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/16",
+            "arithmetic": "6/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "1/4",
+            "time_manipulation": "1/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "gptscan",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 62.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/16",
+            "arithmetic": "0/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "honeybadger",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 62.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/16",
+            "arithmetic": "0/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "maian",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 62.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/16",
+            "arithmetic": "0/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "mando-hgt",
+          "metrics": {
+            "precision": 0.1807,
+            "recall": 0.2419,
+            "f1_score": 0.2069,
+            "execution_time_avg": null,
+            "tp": 15.0,
+            "fp": 68.0,
+            "fn": 47.0
+          },
+          "vulnerability_scores": {
+            "access_control": "5/16",
+            "arithmetic": "3/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "1/4",
+            "time_manipulation": "1/2",
+            "unchecked_low_level_calls": "5/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "manticore",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 62.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/16",
+            "arithmetic": "0/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "mythril",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 62.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/16",
+            "arithmetic": "0/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "osiris",
+          "metrics": {
+            "precision": 0.2727,
+            "recall": 0.0968,
+            "f1_score": 0.1429,
+            "execution_time_avg": null,
+            "tp": 6.0,
+            "fp": 16.0,
+            "fn": 56.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/16",
+            "arithmetic": "6/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "oyente",
+          "metrics": {
+            "precision": 0.3077,
+            "recall": 0.129,
+            "f1_score": 0.1818,
+            "execution_time_avg": null,
+            "tp": 8.0,
+            "fp": 18.0,
+            "fn": 54.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/16",
+            "arithmetic": "8/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "sailfish",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 8.0,
+            "fn": 62.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/16",
+            "arithmetic": "0/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "securify",
+          "metrics": {
+            "precision": 0.4444,
+            "recall": 0.0645,
+            "f1_score": 0.1127,
+            "execution_time_avg": null,
+            "tp": 4.0,
+            "fp": 5.0,
+            "fn": 58.0
+          },
+          "vulnerability_scores": {
+            "access_control": "4/16",
+            "arithmetic": "0/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "securify2",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 2.0,
+            "fn": 62.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/16",
+            "arithmetic": "0/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "sfuzz",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 62.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/16",
+            "arithmetic": "0/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "slither",
+          "metrics": {
+            "precision": 0.2105,
+            "recall": 0.129,
+            "f1_score": 0.16,
+            "execution_time_avg": null,
+            "tp": 8.0,
+            "fp": 30.0,
+            "fn": 54.0
+          },
+          "vulnerability_scores": {
+            "access_control": "5/16",
+            "arithmetic": "0/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "1/4",
+            "time_manipulation": "1/2",
+            "unchecked_low_level_calls": "1/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "smartcheck",
+          "metrics": {
+            "precision": 0.1562,
+            "recall": 0.0806,
+            "f1_score": 0.1064,
+            "execution_time_avg": null,
+            "tp": 5.0,
+            "fp": 27.0,
+            "fn": 57.0
+          },
+          "vulnerability_scores": {
+            "access_control": "2/16",
+            "arithmetic": "0/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "3/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "smartian",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 6.0,
+            "fn": 62.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/16",
+            "arithmetic": "0/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "0/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "solhint",
+          "metrics": {
+            "precision": 0.6,
+            "recall": 0.0968,
+            "f1_score": 0.1667,
+            "execution_time_avg": null,
+            "tp": 6.0,
+            "fp": 4.0,
+            "fn": 56.0
+          },
+          "vulnerability_scores": {
+            "access_control": "4/16",
+            "arithmetic": "0/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "1/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "1/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "vandal",
+          "metrics": {
+            "precision": 0.3333,
+            "recall": 0.0968,
+            "f1_score": 0.15,
+            "execution_time_avg": null,
+            "tp": 6.0,
+            "fp": 12.0,
+            "fn": 56.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/16",
+            "arithmetic": "0/8",
+            "bad_randomness": "0/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "0/17",
+            "reentrancy": "1/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "5/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "vulhunter",
+          "metrics": {
+            "precision": 0.2718,
+            "recall": 0.4516,
+            "f1_score": 0.3394,
+            "execution_time_avg": null,
+            "tp": 28.0,
+            "fp": 75.0,
+            "fn": 34.0
+          },
+          "vulnerability_scores": {
+            "access_control": "10/16",
+            "arithmetic": "8/8",
+            "bad_randomness": "1/2",
+            "denial_of_service": "0/0",
+            "front_running": "0/1",
+            "other": "8/17",
+            "reentrancy": "0/4",
+            "time_manipulation": "0/2",
+            "unchecked_low_level_calls": "1/12"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.4.x; vulnerability_scores use per-category TP/GT."
+        }
+      ]
+    },
+    {
+      "source_id": "lakasingle_merged_by_lines_500_plus_0_8_x_1000_plus",
+      "publication_date": null,
+      "dataset_profile": {
+        "dataset_name": "lakasingle_merged_by_lines_500_plus_0_8_x_1000_plus",
+        "solc": [
+          "0.8.x"
+        ],
+        "contract_count_total": 100,
+        "realism_level": "real_world",
+        "domain_tags": [
+          "token",
+          "defi",
+          "dex",
+          "nft"
+        ],
+        "loc_profile": {
+          "loc_bin_counts_by_solc": {
+            "0-100": {
+              "0.8.x": 0
+            },
+            "100-200": {
+              "0.8.x": 0
+            },
+            "200-300": {
+              "0.8.x": 0
+            },
+            "300-400": {
+              "0.8.x": 0
+            },
+            "400-500": {
+              "0.8.x": 3
+            },
+            "500-600": {
+              "0.8.x": 1
+            },
+            "600-700": {
+              "0.8.x": 3
+            },
+            "700-800": {
+              "0.8.x": 11
+            },
+            "800-900": {
+              "0.8.x": 6
+            },
+            "900-1000": {
+              "0.8.x": 8
+            },
+            "1000+": {
+              "0.8.x": 68
+            }
+          }
+        },
+        "complexity_stats": {
+          "avg_loc": 1282.5,
+          "median_loc": 1114.5,
+          "avg_functions": 145.0,
+          "avg_subcontracts": 30.4,
+          "vulnerability_categories": [
+            "access_control",
+            "arithmetic",
+            "bad_randomness",
+            "denial_of_service",
+            "front_running",
+            "other",
+            "reentrancy",
+            "time_manipulation",
+            "unchecked_low_level_calls"
+          ]
+        },
+        "what_contracts": "Contracts from lakasingle_merged_by_lines/lines_500+/0.8.x_1000+",
+        "how_collected": "Derived from local contract corpus and existing out/* tool reports.",
+        "scale": "100 contracts",
+        "labeling": "Ground truth derived from LAKresult CWE labels mapped to DASP categories via local mapping files.",
+        "target_vulnerabilities": [
+          "access_control",
+          "arithmetic",
+          "bad_randomness",
+          "denial_of_service",
+          "front_running",
+          "other",
+          "reentrancy",
+          "time_manipulation",
+          "unchecked_low_level_calls"
+        ],
+        "label_granularity": "contract-level",
+        "label_count": 211,
+        "label_count_basis": "contract-level DASP category labels; vulnerability_scores are TP/GT per category"
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "confuzzius",
+          "metrics": {
+            "precision": 0.5,
+            "recall": 0.0095,
+            "f1_score": 0.0186,
+            "execution_time_avg": null,
+            "tp": 2.0,
+            "fp": 2.0,
+            "fn": 209.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "2/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "conkas",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 211.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "gptscan",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 6.0,
+            "fn": 211.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "honeybadger",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 211.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "maian",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 211.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "mando-hgt",
+          "metrics": {
+            "precision": 0.122,
+            "recall": 0.0237,
+            "f1_score": 0.0397,
+            "execution_time_avg": null,
+            "tp": 5.0,
+            "fp": 36.0,
+            "fn": 206.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "2/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "3/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "manticore",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 211.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "mythril",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 211.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "osiris",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 211.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "oyente",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 211.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "sailfish",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 211.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "securify",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 211.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "securify2",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 211.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "sfuzz",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 211.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "slither",
+          "metrics": {
+            "precision": 0.2533,
+            "recall": 0.5403,
+            "f1_score": 0.3449,
+            "execution_time_avg": null,
+            "tp": 114.0,
+            "fp": 336.0,
+            "fn": 97.0
+          },
+          "vulnerability_scores": {
+            "access_control": "47/59",
+            "arithmetic": "11/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "2/3",
+            "front_running": "0/2",
+            "other": "11/52",
+            "reentrancy": "2/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "41/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "smartcheck",
+          "metrics": {
+            "precision": 0.4101,
+            "recall": 0.2701,
+            "f1_score": 0.3257,
+            "execution_time_avg": null,
+            "tp": 57.0,
+            "fp": 82.0,
+            "fn": 154.0
+          },
+          "vulnerability_scores": {
+            "access_control": "26/59",
+            "arithmetic": "2/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "2/3",
+            "front_running": "0/2",
+            "other": "21/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "6/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "smartian",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null,
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 211.0
+          },
+          "vulnerability_scores": {
+            "access_control": "0/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "0/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "solhint",
+          "metrics": {
+            "precision": 0.513,
+            "recall": 0.2796,
+            "f1_score": 0.362,
+            "execution_time_avg": null,
+            "tp": 59.0,
+            "fp": 56.0,
+            "fn": 152.0
+          },
+          "vulnerability_scores": {
+            "access_control": "58/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "1/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "vandal",
+          "metrics": {
+            "precision": 0.3006,
+            "recall": 0.2322,
+            "f1_score": 0.262,
+            "execution_time_avg": null,
+            "tp": 49.0,
+            "fp": 114.0,
+            "fn": 162.0
+          },
+          "vulnerability_scores": {
+            "access_control": "6/59",
+            "arithmetic": "0/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "0/3",
+            "front_running": "0/2",
+            "other": "0/52",
+            "reentrancy": "1/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "42/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "vulhunter",
+          "metrics": {
+            "precision": 0.3361,
+            "recall": 0.1943,
+            "f1_score": 0.2462,
+            "execution_time_avg": null,
+            "tp": 41.0,
+            "fp": 81.0,
+            "fn": 170.0
+          },
+          "vulnerability_scores": {
+            "access_control": "13/59",
+            "arithmetic": "17/42",
+            "bad_randomness": "0/1",
+            "denial_of_service": "1/3",
+            "front_running": "0/2",
+            "other": "9/52",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/0",
+            "unchecked_low_level_calls": "1/50"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged_by_lines/lines_500+/0.8.x_1000+; vulnerability_scores use per-category TP/GT."
+        }
+      ]
+    },
+    {
+      "source_id": "lakasingle_merged_0_5_x",
+      "publication_date": null,
+      "dataset_profile": {
+        "dataset_name": "lakasingle_merged_0_5_x",
+        "solc": [
+          "0.4.x",
+          "0.5.x"
+        ],
+        "contract_count_total": 153,
+        "realism_level": "real_world",
+        "domain_tags": [
+          "token",
+          "defi",
+          "dex",
+          "nft"
+        ],
+        "loc_profile": {
+          "loc_bin_counts_by_solc": {
+            "0-100": {
+              "0.5.x": 12
+            },
+            "100-200": {
+              "0.5.x": 24
+            },
+            "200-300": {
+              "0.5.x": 11
+            },
+            "300-400": {
+              "0.5.x": 17
+            },
+            "400-500": {
+              "0.5.x": 15
+            },
+            "500-600": {
+              "0.5.x": 58
+            },
+            "600-700": {
+              "0.5.x": 7
+            },
+            "700-800": {
+              "0.5.x": 1
+            },
+            "800-900": {
+              "0.5.x": 2
+            },
+            "900-1000": {
+              "0.4.x": 1,
+              "0.5.x": 2
+            },
+            "1000+": {
+              "0.5.x": 3
+            }
+          }
+        },
+        "complexity_stats": {
+          "avg_loc": 427.6,
+          "median_loc": 483,
+          "avg_functions": 47.2,
+          "avg_subcontracts": 11.1,
+          "vulnerability_categories": [
+            "access_control",
+            "arithmetic",
+            "bad_randomness",
+            "denial_of_service",
+            "front_running",
+            "other",
+            "reentrancy",
+            "time_manipulation",
+            "unchecked_low_level_calls"
+          ]
+        },
+        "what_contracts": "Contracts from lakasingle_merged/0.5.x",
+        "how_collected": "Derived from local contract corpus and existing out/* tool reports.",
+        "scale": "153 contracts",
+        "labeling": "Ground truth derived from LAKresult CWE labels mapped to DASP categories via local mapping files.",
+        "target_vulnerabilities": [
+          "access_control",
+          "arithmetic",
+          "bad_randomness",
+          "denial_of_service",
+          "front_running",
+          "other",
+          "reentrancy",
+          "time_manipulation",
+          "unchecked_low_level_calls"
+        ],
+        "label_granularity": "contract-level",
+        "label_count": null,
+        "label_count_basis": "contract-level DASP category labels; vulnerability_scores are TP/GT per category"
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "confuzzius",
+          "metrics": {
+            "precision": 0.1456,
+            "recall": 0.0638,
+            "f1_score": 0.0888,
+            "execution_time_avg": 466.5152
+          },
+          "vulnerability_scores": {
+            "access_control": "3/87",
+            "arithmetic": "12/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "0/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "conkas",
+          "metrics": {
+            "precision": 0.2195,
+            "recall": 0.0383,
+            "f1_score": 0.0652,
+            "execution_time_avg": 157.2501
+          },
+          "vulnerability_scores": {
+            "access_control": "0/87",
+            "arithmetic": "8/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "1/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "0/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "gptscan",
+          "metrics": {
+            "precision": 0.0588,
+            "recall": 0.0043,
+            "f1_score": 0.0079,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "1/87",
+            "arithmetic": "0/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "0/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "honeybadger",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 2.5034
+          },
+          "vulnerability_scores": {
+            "access_control": "0/87",
+            "arithmetic": "0/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "0/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "maian",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 120.3657
+          },
+          "vulnerability_scores": {
+            "access_control": "0/87",
+            "arithmetic": "0/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "0/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "mando-hgt",
+          "metrics": {
+            "precision": 0.1016,
+            "recall": 0.2128,
+            "f1_score": 0.1376,
+            "execution_time_avg": 44.8279
+          },
+          "vulnerability_scores": {
+            "access_control": "15/87",
+            "arithmetic": "13/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "5/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "1/3",
+            "unchecked_low_level_calls": "16/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "manticore",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 927.6408
+          },
+          "vulnerability_scores": {
+            "access_control": "0/87",
+            "arithmetic": "0/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "0/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "mythril",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "0/87",
+            "arithmetic": "0/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "0/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "osiris",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "0/87",
+            "arithmetic": "0/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "0/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "oyente",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 4.6685
+          },
+          "vulnerability_scores": {
+            "access_control": "0/87",
+            "arithmetic": "0/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "0/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "sailfish",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "0/87",
+            "arithmetic": "0/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "0/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "securify",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 3.1402
+          },
+          "vulnerability_scores": {
+            "access_control": "0/87",
+            "arithmetic": "0/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "0/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "securify2",
+          "metrics": {
+            "precision": 0.3007,
+            "recall": 0.3915,
+            "f1_score": 0.3401,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "71/87",
+            "arithmetic": "5/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "5/8",
+            "front_running": "0/3",
+            "other": "16/58",
+            "reentrancy": "1/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "0/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "sfuzz",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": 1.3316
+          },
+          "vulnerability_scores": {
+            "access_control": "0/87",
+            "arithmetic": "0/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "0/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "slither",
+          "metrics": {
+            "precision": 0.3525,
+            "recall": 0.183,
+            "f1_score": 0.2409,
+            "execution_time_avg": 5.0295
+          },
+          "vulnerability_scores": {
+            "access_control": "23/87",
+            "arithmetic": "6/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "2/8",
+            "front_running": "0/3",
+            "other": "8/58",
+            "reentrancy": "1/2",
+            "time_manipulation": "1/3",
+            "unchecked_low_level_calls": "2/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "smartcheck",
+          "metrics": {
+            "precision": 0.4052,
+            "recall": 0.2,
+            "f1_score": 0.2678,
+            "execution_time_avg": 3.7545
+          },
+          "vulnerability_scores": {
+            "access_control": "10/87",
+            "arithmetic": "5/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "4/8",
+            "front_running": "0/3",
+            "other": "14/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "14/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "smartian",
+          "metrics": {
+            "precision": 0.2727,
+            "recall": 0.0128,
+            "f1_score": 0.0244,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "0/87",
+            "arithmetic": "1/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "2/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "solhint",
+          "metrics": {
+            "precision": 0.5,
+            "recall": 0.0085,
+            "f1_score": 0.0167,
+            "execution_time_avg": 10.3604
+          },
+          "vulnerability_scores": {
+            "access_control": "2/87",
+            "arithmetic": "0/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "0/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "vandal",
+          "metrics": {
+            "precision": 0.2346,
+            "recall": 0.0809,
+            "f1_score": 0.1203,
+            "execution_time_avg": 45.6507
+          },
+          "vulnerability_scores": {
+            "access_control": "0/87",
+            "arithmetic": "0/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "0/8",
+            "front_running": "0/3",
+            "other": "0/58",
+            "reentrancy": "2/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "17/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "vulhunter",
+          "metrics": {
+            "precision": 0.2529,
+            "recall": 0.4638,
+            "f1_score": 0.3273,
+            "execution_time_avg": 65.7598
+          },
+          "vulnerability_scores": {
+            "access_control": "21/87",
+            "arithmetic": "23/25",
+            "bad_randomness": "0/3",
+            "denial_of_service": "5/8",
+            "front_running": "1/3",
+            "other": "44/58",
+            "reentrancy": "0/2",
+            "time_manipulation": "0/3",
+            "unchecked_low_level_calls": "15/46"
+          },
+          "evidence_source": "Generated from score_reports_or_slither.py over lakasingle_merged/0.5.x; vulnerability_scores use per-category TP/GT."
+        }
+      ]
+    },
+    {
+      "source_id": "smartbugsdb",
+      "publication_date": null,
+      "dataset_profile": {
+        "dataset_name": "smartbugsdb",
+        "solc": [
+          "0.4.x",
+          "0.5.x"
+        ],
+        "contract_count_total": 140,
+        "realism_level": "real_world",
+        "domain_tags": [
+          "benchmark",
+          "smartbugs"
+        ],
+        "loc_profile": {
+          "loc_bin_counts_by_solc": {
+            "0-100": {
+              "0.4.x": 116,
+              "0.5.x": 1
+            },
+            "100-200": {
+              "0.4.x": 12
+            },
+            "200-300": {
+              "0.4.x": 4
+            },
+            "300-400": {
+              "0.4.x": 3
+            },
+            "400-500": {
+              "0.4.x": 1
+            },
+            "500-600": {},
+            "600-700": {},
+            "700-800": {
+              "0.4.x": 2
+            },
+            "800-900": {},
+            "900-1000": {},
+            "1000+": {
+              "0.4.x": 1
+            }
+          }
+        },
+        "complexity_stats": {
+          "avg_loc": 85.4,
+          "median_loc": 35.0,
+          "avg_functions": 7.5,
+          "avg_subcontracts": 2.8,
+          "vulnerability_categories": [
+            "access_control",
+            "arithmetic",
+            "bad_randomness",
+            "denial_of_service",
+            "front_running",
+            "other",
+            "reentrancy",
+            "time_manipulation",
+            "unchecked_low_level_calls"
+          ]
+        },
+        "what_contracts": "Contracts from smartbugsdb; child folders define vulnerability categories.",
+        "how_collected": "Derived from local SmartBugsDB corpus and existing smartbugsout/* tool reports.",
+        "scale": "140 contracts",
+        "labeling": "Ground truth derived from SmartBugsDB inline <yes><report> markers; short_addresses mapped to other.",
+        "target_vulnerabilities": [
+          "access_control",
+          "arithmetic",
+          "bad_randomness",
+          "denial_of_service",
+          "front_running",
+          "other",
+          "reentrancy",
+          "time_manipulation",
+          "unchecked_low_level_calls"
+        ],
+        "label_granularity": "line-level labels aggregated to contract/category-level scoring",
+        "label_count": 203,
+        "label_count_basis": "line-level SmartBugsDB labels aggregated by score_smartbugs_reports.py; vulnerability_scores are TP/GT per category"
+      },
+      "tool_performance_data": [
+        {
+          "tool_name": "confuzzius",
+          "metrics": {
+            "precision": 0.4206,
+            "recall": 0.5222,
+            "f1_score": 0.4659,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "4/21",
+            "arithmetic": "15/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "0/7",
+            "front_running": "3/7",
+            "other": "0/1",
+            "reentrancy": "27/32",
+            "time_manipulation": "4/7",
+            "unchecked_low_level_calls": "53/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "conkas",
+          "metrics": {
+            "precision": 0.3175,
+            "recall": 0.5616,
+            "f1_score": 0.4057,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "0/21",
+            "arithmetic": "16/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "0/7",
+            "front_running": "2/7",
+            "other": "0/1",
+            "reentrancy": "27/32",
+            "time_manipulation": "5/7",
+            "unchecked_low_level_calls": "64/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "gptscan",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "0/21",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "0/7",
+            "front_running": "0/7",
+            "other": "0/1",
+            "reentrancy": "0/32",
+            "time_manipulation": "0/7",
+            "unchecked_low_level_calls": "0/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "honeybadger",
+          "metrics": {
+            "precision": 0.5758,
+            "recall": 0.0936,
+            "f1_score": 0.161,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "0/21",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "0/7",
+            "front_running": "0/7",
+            "other": "0/1",
+            "reentrancy": "19/32",
+            "time_manipulation": "0/7",
+            "unchecked_low_level_calls": "0/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "maian",
+          "metrics": {
+            "precision": 0.0148,
+            "recall": 0.0099,
+            "f1_score": 0.0118,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "2/21",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "0/7",
+            "front_running": "0/7",
+            "other": "0/1",
+            "reentrancy": "0/32",
+            "time_manipulation": "0/7",
+            "unchecked_low_level_calls": "0/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "mando-hgt",
+          "metrics": {
+            "precision": 0.1364,
+            "recall": 0.2217,
+            "f1_score": 0.1689,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "3/21",
+            "arithmetic": "6/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "7/7",
+            "front_running": "1/7",
+            "other": "0/1",
+            "reentrancy": "7/32",
+            "time_manipulation": "3/7",
+            "unchecked_low_level_calls": "18/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "manticore",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "0/21",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "0/7",
+            "front_running": "0/7",
+            "other": "0/1",
+            "reentrancy": "0/32",
+            "time_manipulation": "0/7",
+            "unchecked_low_level_calls": "0/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "mythril",
+          "metrics": {
+            "precision": 0.3074,
+            "recall": 0.4089,
+            "f1_score": 0.351,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "8/21",
+            "arithmetic": "0/23",
+            "bad_randomness": "2/30",
+            "denial_of_service": "1/7",
+            "front_running": "1/7",
+            "other": "0/1",
+            "reentrancy": "23/32",
+            "time_manipulation": "0/7",
+            "unchecked_low_level_calls": "48/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "osiris",
+          "metrics": {
+            "precision": 0.142,
+            "recall": 0.2217,
+            "f1_score": 0.1731,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "0/21",
+            "arithmetic": "16/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "0/7",
+            "front_running": "2/7",
+            "other": "0/1",
+            "reentrancy": "26/32",
+            "time_manipulation": "1/7",
+            "unchecked_low_level_calls": "0/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "oyente",
+          "metrics": {
+            "precision": 0.2448,
+            "recall": 0.1724,
+            "f1_score": 0.2023,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "0/21",
+            "arithmetic": "15/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "0/7",
+            "front_running": "1/7",
+            "other": "0/1",
+            "reentrancy": "19/32",
+            "time_manipulation": "0/7",
+            "unchecked_low_level_calls": "0/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "sailfish",
+          "metrics": {
+            "precision": 0.2841,
+            "recall": 0.1232,
+            "f1_score": 0.1718,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "0/21",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "0/7",
+            "front_running": "2/7",
+            "other": "0/1",
+            "reentrancy": "23/32",
+            "time_manipulation": "0/7",
+            "unchecked_low_level_calls": "0/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "securify",
+          "metrics": {
+            "precision": 0.3913,
+            "recall": 0.3547,
+            "f1_score": 0.3721,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "6/21",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "0/7",
+            "front_running": "2/7",
+            "other": "0/1",
+            "reentrancy": "22/32",
+            "time_manipulation": "0/7",
+            "unchecked_low_level_calls": "42/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "securify2",
+          "metrics": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "0/21",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "0/7",
+            "front_running": "0/7",
+            "other": "0/1",
+            "reentrancy": "0/32",
+            "time_manipulation": "0/7",
+            "unchecked_low_level_calls": "0/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "sfuzz",
+          "metrics": {
+            "precision": 0.1846,
+            "recall": 0.1773,
+            "f1_score": 0.1809,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "2/21",
+            "arithmetic": "11/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "0/7",
+            "front_running": "0/7",
+            "other": "0/1",
+            "reentrancy": "22/32",
+            "time_manipulation": "1/7",
+            "unchecked_low_level_calls": "0/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "slither",
+          "metrics": {
+            "precision": 0.2291,
+            "recall": 0.6059,
+            "f1_score": 0.3324,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "12/21",
+            "arithmetic": "0/23",
+            "bad_randomness": "8/30",
+            "denial_of_service": "2/7",
+            "front_running": "0/7",
+            "other": "0/1",
+            "reentrancy": "29/32",
+            "time_manipulation": "5/7",
+            "unchecked_low_level_calls": "67/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "smartcheck",
+          "metrics": {
+            "precision": 0.1122,
+            "recall": 0.3399,
+            "f1_score": 0.1687,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "2/21",
+            "arithmetic": "2/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "1/7",
+            "front_running": "0/7",
+            "other": "0/1",
+            "reentrancy": "0/32",
+            "time_manipulation": "2/7",
+            "unchecked_low_level_calls": "62/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "smartian",
+          "metrics": {
+            "precision": 0.5033,
+            "recall": 0.3744,
+            "f1_score": 0.4294,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "9/21",
+            "arithmetic": "12/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "0/7",
+            "front_running": "0/7",
+            "other": "0/1",
+            "reentrancy": "10/32",
+            "time_manipulation": "2/7",
+            "unchecked_low_level_calls": "43/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "solhint",
+          "metrics": {
+            "precision": 0.0492,
+            "recall": 0.2167,
+            "f1_score": 0.0802,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "8/21",
+            "arithmetic": "0/23",
+            "bad_randomness": "17/30",
+            "denial_of_service": "0/7",
+            "front_running": "0/7",
+            "other": "0/1",
+            "reentrancy": "0/32",
+            "time_manipulation": "0/7",
+            "unchecked_low_level_calls": "19/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "vandal",
+          "metrics": {
+            "precision": 0.3802,
+            "recall": 0.2266,
+            "f1_score": 0.284,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "2/21",
+            "arithmetic": "0/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "0/7",
+            "front_running": "0/7",
+            "other": "0/1",
+            "reentrancy": "9/32",
+            "time_manipulation": "0/7",
+            "unchecked_low_level_calls": "35/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        },
+        {
+          "tool_name": "vulhunter",
+          "metrics": {
+            "precision": 0.3636,
+            "recall": 0.5714,
+            "f1_score": 0.4444,
+            "execution_time_avg": null
+          },
+          "vulnerability_scores": {
+            "access_control": "18/21",
+            "arithmetic": "5/23",
+            "bad_randomness": "0/30",
+            "denial_of_service": "6/7",
+            "front_running": "3/7",
+            "other": "0/1",
+            "reentrancy": "25/32",
+            "time_manipulation": "0/7",
+            "unchecked_low_level_calls": "59/75"
+          },
+          "evidence_source": "Generated from score_smartbugs_reports.py over smartbugsdb and smartbugsout; vulnerability_scores use per-category TP/GT."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "version": "1.2.0",
+  "predicates": {
+    "d2.solidity_versions": {
+      "candidate_type": "structured_fact",
+      "target_path": "d2_solidity_versions",
+      "value_type": "solc_range",
+      "materialize": true,
+      "description": "The Solidity compiler version range the tool supports. Extract when the paper states which Solidity versions the tool works with, e.g. '0.4.x to 0.8.x'."
+    },
+    "d3.multifile_support": {
+      "candidate_type": "structured_fact",
+      "target_path": "d3_multifile_support",
+      "value_type": "tri_state",
+      "materialize": true,
+      "description": "Whether the tool can analyze projects with multiple Solidity source files (imports). 'yes' if it handles inter-file imports, 'partial' if limited, 'no' if single-file only."
+    },
+    "d3.external_calls_support": {
+      "candidate_type": "structured_fact",
+      "target_path": "d3_external_calls_support",
+      "value_type": "tri_state",
+      "materialize": true,
+      "description": "Whether the tool can analyze external contract calls (cross-contract interactions). 'yes' if fully supported, 'partial' if limited, 'no' if ignored."
+    },
+    "d3.multicontract_support": {
+      "candidate_type": "structured_fact",
+      "target_path": "d3_multicontract_support",
+      "value_type": "tri_state",
+      "materialize": true,
+      "description": "Whether the tool can analyze multiple contracts in a single analysis session. 'yes' if fully supported, 'partial' if limited, 'no' if single-contract only."
+    },
+    "d4.custom_rules": {
+      "candidate_type": "structured_fact",
+      "target_path": "d4_custom_rules",
+      "value_type": "custom_rule_level",
+      "materialize": true,
+      "description": "Whether users can define custom detection rules. 'full' = extensible rule system (e.g. plugins, custom detectors), 'limited' = some configurability, 'none' = no user-defined rules (tool uses fixed or auto-learned rules only). If the paper says 'no manual pre-defined rules' or 'learns automatically', this is 'none'."
+    },
+    "d6.outputs.text": {
+      "candidate_type": "structured_fact",
+      "target_path": "d6_outputs.text",
+      "value_type": "bool",
+      "materialize": true,
+      "description": "Whether the tool can output results as plain text to the terminal/console."
+    },
+    "d6.outputs.json": {
+      "candidate_type": "structured_fact",
+      "target_path": "d6_outputs.json",
+      "value_type": "bool",
+      "materialize": true,
+      "description": "Whether the tool can output results in JSON format."
+    },
+    "d6.outputs.sarif": {
+      "candidate_type": "structured_fact",
+      "target_path": "d6_outputs.sarif",
+      "value_type": "bool",
+      "materialize": true,
+      "description": "Whether the tool can output results in SARIF format (Static Analysis Results Interchange Format)."
+    },
+    "d6.outputs.pdf": {
+      "candidate_type": "structured_fact",
+      "target_path": "d6_outputs.pdf",
+      "value_type": "bool",
+      "materialize": true,
+      "description": "Whether the tool can output a PDF report of its findings."
+    },
+    "d6.outputs.code_locate": {
+      "candidate_type": "structured_fact",
+      "target_path": "d6_outputs.code_locate",
+      "value_type": "bool",
+      "materialize": true,
+      "description": "Whether the tool can pinpoint the exact source code location (file, line, statement) of detected vulnerabilities. true if the tool reports defective source code statements or line numbers."
+    },
+    "d6.outputs.explanation": {
+      "candidate_type": "structured_fact",
+      "target_path": "d6_outputs.explanation",
+      "value_type": "bool",
+      "materialize": true,
+      "description": "Whether the tool provides explanations or repair suggestions for detected vulnerabilities. true if it outputs descriptions, remediation advice, or repair methods."
+    },
+    "d7.input.sol": {
+      "candidate_type": "structured_fact",
+      "target_path": "d7_input_support.sol",
+      "value_type": "bool",
+      "materialize": true,
+      "description": "Whether the tool accepts Solidity source code (.sol files) as input. true if the paper says it analyzes source code or Solidity files."
+    },
+    "d7.input.bytecode": {
+      "candidate_type": "structured_fact",
+      "target_path": "d7_input_support.bytecode",
+      "value_type": "bool",
+      "materialize": true,
+      "description": "Whether the tool accepts EVM bytecode as input. true if the paper says it analyzes bytecode, creation bytecode, or deployed bytecode."
+    },
+    "d7.input.runtime": {
+      "candidate_type": "structured_fact",
+      "target_path": "d7_input_support.runtime",
+      "value_type": "bool",
+      "materialize": true,
+      "description": "Whether the tool accepts EVM runtime bytecode as input (as opposed to creation bytecode). true if it specifically mentions runtime bytecode analysis."
+    },
+    "d8.mode": {
+      "candidate_type": "structured_fact",
+      "target_path": "d8_mode",
+      "value_type": "detection_mode",
+      "materialize": true,
+      "description": "The primary vulnerability detection technique. 'static' = pattern matching or AST/IR analysis without execution; 'symbolic' = symbolic execution or constraint solving; 'fuzz' = fuzzing or dynamic testing; 'formal' = formal verification or theorem proving; 'hybrid' = combines multiple techniques (e.g. ML + symbolic, static + dynamic). Choose the SINGLE best fit for the tool's main approach."
+    },
+    "d9.activity.stars": {
+      "candidate_type": "structured_fact",
+      "target_path": "d9_activity.stars",
+      "value_type": "int",
+      "materialize": true,
+      "description": "GitHub star count for the tool's repository. Only extract if the paper explicitly states the number of GitHub stars."
+    },
+    "d9.activity.last_update_days": {
+      "candidate_type": "structured_fact",
+      "target_path": "d9_activity.last_update_days",
+      "value_type": "int",
+      "materialize": true,
+      "description": "Days since the tool's last update/commit. Only extract if explicitly stated."
+    },
+    "uses_analysis_technique": {
+      "candidate_type": "structured_fact",
+      "target_path": "research_uses_analysis_technique",
+      "value_type": "free_text",
+      "materialize": false,
+      "description": "A specific analysis technique the tool employs, e.g. 'symbolic execution', 'abstract interpretation', 'taint analysis', 'machine learning', 'fuzzing'."
+    },
+    "analysis_method": {
+      "candidate_type": "structured_fact",
+      "target_path": "research_analysis_method",
+      "value_type": "free_text",
+      "materialize": false,
+      "description": "A description of the tool's analysis methodology or algorithmic approach, e.g. 'constructs CFG and performs depth-first path traversal'."
+    },
+    "analyzes_representation": {
+      "candidate_type": "structured_fact",
+      "target_path": "research_analyzes_representation",
+      "value_type": "free_text",
+      "materialize": false,
+      "description": "What code representation the tool analyzes, e.g. 'source code AST', 'EVM bytecode', 'opcode sequences', 'control flow graph'."
+    },
+    "study_used_version": {
+      "candidate_type": "structured_fact",
+      "target_path": "research_study_used_version",
+      "value_type": "free_text",
+      "materialize": false,
+      "description": "The specific version of the tool used in the paper's evaluation, e.g. 'v0.8.0', 'commit abc123'."
+    },
+    "version_used_in_study": {
+      "candidate_type": "structured_fact",
+      "target_path": "research_version_used_in_study",
+      "value_type": "free_text",
+      "materialize": false,
+      "description": "Same as study_used_version — the version of the tool used in this study's experiments."
+    },
+    "vulnerability_type_coverage": {
+      "candidate_type": "structured_fact",
+      "target_path": "research_vulnerability_type_coverage",
+      "value_type": "free_text",
+      "materialize": false,
+      "description": "The types of vulnerabilities the tool can detect, e.g. 'reentrancy, integer overflow, access control'."
+    },
+    "analysis_time_seconds_per_contract": {
+      "candidate_type": "structured_fact",
+      "target_path": "research_analysis_time_seconds_per_contract",
+      "value_type": "float",
+      "materialize": false,
+      "description": "Average analysis time per contract in seconds as reported in the evaluation."
+    },
+    "memory_resource_demand": {
+      "candidate_type": "structured_fact",
+      "target_path": "research_memory_resource_demand",
+      "value_type": "free_text",
+      "materialize": false,
+      "description": "Memory usage or resource requirements reported for the tool, e.g. '81.3MB per contract'."
+    },
+    "detected_vulnerabilities_count": {
+      "candidate_type": "structured_fact",
+      "target_path": "research_detected_vulnerabilities_count",
+      "value_type": "int",
+      "materialize": false,
+      "description": "Total number of vulnerabilities detected in the paper's evaluation dataset."
+    },
+    "evaluation_approach": {
+      "candidate_type": "structured_fact",
+      "target_path": "research_evaluation_approach",
+      "value_type": "free_text",
+      "materialize": false,
+      "description": "How the paper evaluated the tool, e.g. 'benchmark on a large real-world contract corpus' or 'comparison with several baselines on the paper's benchmark dataset'."
+    },
+    "detects_issue_type": {
+      "candidate_type": "structured_fact",
+      "target_path": "research_detects_issue_type",
+      "value_type": "free_text",
+      "materialize": false,
+      "description": "A specific vulnerability or issue type the tool detects, e.g. 'reentrancy', 'integer overflow', 'tx-origin'."
+    },
+    "d5.strength.reentrancy": {
+      "candidate_type": "structured_fact",
+      "target_path": "d5_strength_labels.reentrancy",
+      "value_type": "strength_label",
+      "materialize": true,
+      "description": "The qualitative strength label (weak/medium/strong) for tool capability on reentrancy."
+    },
+    "category_ranking.reentrancy.stronger_than": {
+      "candidate_type": "structured_fact",
+      "target_path": "category_ranking_knowledge.reentrancy",
+      "value_type": "tool_name_list",
+      "materialize": true,
+      "description": "Named tools that the subject tool is stronger than on reentrancy. Use only when the paper explicitly supports the comparison."
+    },
+    "d5.strength.access_control": {
+      "candidate_type": "structured_fact",
+      "target_path": "d5_strength_labels.access_control",
+      "value_type": "strength_label",
+      "materialize": true,
+      "description": "The qualitative strength label (weak/medium/strong) for tool capability on access_control."
+    },
+    "category_ranking.access_control.stronger_than": {
+      "candidate_type": "structured_fact",
+      "target_path": "category_ranking_knowledge.access_control",
+      "value_type": "tool_name_list",
+      "materialize": true,
+      "description": "Named tools that the subject tool is stronger than on access_control. Use only when the paper explicitly supports the comparison."
+    },
+    "d5.strength.arithmetic": {
+      "candidate_type": "structured_fact",
+      "target_path": "d5_strength_labels.arithmetic",
+      "value_type": "strength_label",
+      "materialize": true,
+      "description": "The qualitative strength label (weak/medium/strong) for tool capability on arithmetic."
+    },
+    "category_ranking.arithmetic.stronger_than": {
+      "candidate_type": "structured_fact",
+      "target_path": "category_ranking_knowledge.arithmetic",
+      "value_type": "tool_name_list",
+      "materialize": true,
+      "description": "Named tools that the subject tool is stronger than on arithmetic. Use only when the paper explicitly supports the comparison."
+    },
+    "d5.strength.unchecked_low_level_calls": {
+      "candidate_type": "structured_fact",
+      "target_path": "d5_strength_labels.unchecked_low_level_calls",
+      "value_type": "strength_label",
+      "materialize": true,
+      "description": "The qualitative strength label (weak/medium/strong) for tool capability on unchecked_low_level_calls."
+    },
+    "category_ranking.unchecked_low_level_calls.stronger_than": {
+      "candidate_type": "structured_fact",
+      "target_path": "category_ranking_knowledge.unchecked_low_level_calls",
+      "value_type": "tool_name_list",
+      "materialize": true,
+      "description": "Named tools that the subject tool is stronger than on unchecked_low_level_calls. Use only when the paper explicitly supports the comparison."
+    },
+    "d5.strength.denial_of_service": {
+      "candidate_type": "structured_fact",
+      "target_path": "d5_strength_labels.denial_of_service",
+      "value_type": "strength_label",
+      "materialize": true,
+      "description": "The qualitative strength label (weak/medium/strong) for tool capability on denial_of_service."
+    },
+    "category_ranking.denial_of_service.stronger_than": {
+      "candidate_type": "structured_fact",
+      "target_path": "category_ranking_knowledge.denial_of_service",
+      "value_type": "tool_name_list",
+      "materialize": true,
+      "description": "Named tools that the subject tool is stronger than on denial_of_service. Use only when the paper explicitly supports the comparison."
+    },
+    "d5.strength.bad_randomness": {
+      "candidate_type": "structured_fact",
+      "target_path": "d5_strength_labels.bad_randomness",
+      "value_type": "strength_label",
+      "materialize": true,
+      "description": "The qualitative strength label (weak/medium/strong) for tool capability on bad_randomness."
+    },
+    "category_ranking.bad_randomness.stronger_than": {
+      "candidate_type": "structured_fact",
+      "target_path": "category_ranking_knowledge.bad_randomness",
+      "value_type": "tool_name_list",
+      "materialize": true,
+      "description": "Named tools that the subject tool is stronger than on bad_randomness. Use only when the paper explicitly supports the comparison."
+    },
+    "d5.strength.front_running": {
+      "candidate_type": "structured_fact",
+      "target_path": "d5_strength_labels.front_running",
+      "value_type": "strength_label",
+      "materialize": true,
+      "description": "The qualitative strength label (weak/medium/strong) for tool capability on front_running."
+    },
+    "category_ranking.front_running.stronger_than": {
+      "candidate_type": "structured_fact",
+      "target_path": "category_ranking_knowledge.front_running",
+      "value_type": "tool_name_list",
+      "materialize": true,
+      "description": "Named tools that the subject tool is stronger than on front_running. Use only when the paper explicitly supports the comparison."
+    },
+    "d5.strength.time_manipulation": {
+      "candidate_type": "structured_fact",
+      "target_path": "d5_strength_labels.time_manipulation",
+      "value_type": "strength_label",
+      "materialize": true,
+      "description": "The qualitative strength label (weak/medium/strong) for tool capability on time_manipulation."
+    },
+    "category_ranking.time_manipulation.stronger_than": {
+      "candidate_type": "structured_fact",
+      "target_path": "category_ranking_knowledge.time_manipulation",
+      "value_type": "tool_name_list",
+      "materialize": true,
+      "description": "Named tools that the subject tool is stronger than on time_manipulation. Use only when the paper explicitly supports the comparison."
+    },
+    "d5.strength.short_addresses": {
+      "candidate_type": "structured_fact",
+      "target_path": "d5_strength_labels.short_addresses",
+      "value_type": "strength_label",
+      "materialize": true,
+      "description": "The qualitative strength label (weak/medium/strong) for tool capability on short_addresses."
+    },
+    "category_ranking.short_addresses.stronger_than": {
+      "candidate_type": "structured_fact",
+      "target_path": "category_ranking_knowledge.short_addresses",
+      "value_type": "tool_name_list",
+      "materialize": true,
+      "description": "Named tools that the subject tool is stronger than on short_addresses. Use only when the paper explicitly supports the comparison."
+    },
+    "d5.strength.unknown_unknowns": {
+      "candidate_type": "structured_fact",
+      "target_path": "d5_strength_labels.unknown_unknowns",
+      "value_type": "strength_label",
+      "materialize": true,
+      "description": "The qualitative strength label (weak/medium/strong) for tool capability on unknown_unknowns."
+    },
+    "category_ranking.unknown_unknowns.stronger_than": {
+      "candidate_type": "structured_fact",
+      "target_path": "category_ranking_knowledge.unknown_unknowns",
+      "value_type": "tool_name_list",
+      "materialize": true,
+      "description": "Named tools that the subject tool is stronger than on unknown_unknowns. Use only when the paper explicitly supports the comparison."
+    }
+  }
+}

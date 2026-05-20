@@ -1,0 +1,33 @@
+{
+  "toolcard_schema_version": "1.3.0",
+  "tool_id": "maian",
+  "tool_name": "Maian",
+  "aliases": [
+    "Maian"
+  ],
+  "d7_input_support": {
+    "sol": true,
+    "bytecode": true,
+    "runtime": true
+  },
+  "d8_mode": "symbolic",
+  "d2_solidity_versions": "0.4.0-0.8.99",
+  "d3_multifile_support": "no",
+  "d3_external_calls_support": "yes",
+  "d3_multicontract_support": "yes",
+  "d4_custom_rules": "full",
+  "d6_outputs": {
+    "text": true,
+    "json": true,
+    "sarif": true,
+    "pdf": false,
+    "code_locate": false,
+    "explanation": false
+  },
+  "d9_activity": {
+    "stars": 568,
+    "last_update_days": 898
+  },
+  "category_ranking_knowledge": [],
+  "d5_strength_labels": {}
+}

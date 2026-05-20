@@ -1,0 +1,22 @@
+{
+  "slither": "slither",
+  "mythril": "mythril",
+  "manticore": "manticore",
+  "securify": "securify",
+  "securify2": "securify2",
+  "smartcheck": "smartcheck",
+  "sfuzz": "sfuzz",
+  "confuzzius": "confuzzius",
+  "conkas": "conkas",
+  "osiris": "osiris",
+  "oyente": "oyente",
+  "solhint": "solhint",
+  "vandal": "vandal",
+  "maian": "maian",
+  "honeybadger": "honeybadger",
+  "gptscan": "gptscan",
+  "mando-hgt": "mando_hgt",
+  "vulhunter": "vulhunter",
+  "madmax": "madmax",
+  "semgrep": "semgrep"
+}

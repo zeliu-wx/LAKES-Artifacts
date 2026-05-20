@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toolrank"
+version = "0.1.0"
+description = "Deterministic tool recommendation pipeline for SmartBugs-style analyzers"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "QuantifyX"}]
+dependencies = [
+  "typer>=0.12.0",
+  "pydantic>=2.7.0",
+  "numpy>=1.26.0",
+]
+
+[project.optional-dependencies]
+llm = ["openai>=1.30.0"]
+dev = ["pytest>=8.2.0"]
+
+[project.scripts]
+toolrank = "toolrank.cli:main"
+toolrank-runner = "toolrank.runner:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["toolrank*"]
+
+[tool.setuptools.package-data]
+toolrank = ["config/*.csv", "config/*.json", "kb_extract/config/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,24 @@
+{
+  "tool_ids": [
+    "confuzzius",
+    "conkas",
+    "gptscan",
+    "honeybadger",
+    "maian",
+    "mando-hgt",
+    "manticore",
+    "mythril",
+    "osiris",
+    "oyente",
+    "sailfish",
+    "securify",
+    "securify2",
+    "sfuzz",
+    "slither",
+    "smartcheck",
+    "smartian",
+    "solhint",
+    "vandal",
+    "vulhunter"
+  ]
+}
