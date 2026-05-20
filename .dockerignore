@@ -1,0 +1,10 @@
+.git
+out/
+LAKES_out/
+**/__pycache__/
+**/*.pyc
+*.egg-info/
+.pytest_cache/
+docs/
+tests/
+scripts/
