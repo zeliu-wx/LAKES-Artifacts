@@ -70,6 +70,15 @@ ENV DOTNET_ROOT=/opt/dotnet \
     DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 \
     TOOLRANK_SMARTIAN_RUNNER=/work/docker/runners/run_smartian.py
 
+# 选一个默认 solc 版本，使裸 `solc` 可用（smartian 等的预检 `solc --version` 需要）。
+# 运行时各工具仍可 `solc-select use <ver>` 按合约覆盖。
+RUN solc-select use 0.5.12
+
+# Smartian.dll 在构建机上把资源（src/Agent/*.bin 等）的绝对路径焊进了二进制。
+# 用符号链接把原构建路径重定向到镜像内 vendored 副本，使写死路径在运行时可解析。
+RUN mkdir -p /Users/liuze/Downloads/QuantifyX \
+    && ln -sfn /work/docker/vendor/smartian /Users/liuze/Downloads/QuantifyX/Smartian
+
 # 内部 dockerd 的镜像/层存储；可用命名卷挂载以跨运行缓存已拉取的工具镜像
 VOLUME /var/lib/docker
 
