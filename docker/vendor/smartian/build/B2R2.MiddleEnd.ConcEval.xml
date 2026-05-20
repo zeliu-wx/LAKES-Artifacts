@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>B2R2.MiddleEnd.ConcEval</name></assembly>
+<members>
+<member name="T:B2R2.MiddleEnd.ConcEval.EvalValue">
+<summary>
+ A value is either defined or undefined.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.Memory.mem">
+<summary>
+ Store memory contents (byte-level).
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.ConcEval.Labels">
+<summary>
+ Store labels of LowUIR statements.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.EvalState.IgnoreUndef@">
+<summary>
+ Whether to ignore statements that cannot be evaluated due to undef values.
+ This is particularly useful to quickly check some constants.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.EvalState.InPrematureState@">
+<summary>
+ Indicate whether we are in an abnormal state. If so, the rest of the
+ evaluation should be aborted. This flag should never be set in normal
+ situation.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.EvalState.IsInstrTerminated@">
+<summary>
+ Indicate whether to terminate the current instruction or not. This flag is
+ set to true when we encounter an inter-jump statement, so that we can
+ ignore the rest of the statements.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.EvalState.Callbacks@">
+<summary>
+ Callback functions.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.EvalState.Memory@">
+<summary>
+ Memory.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.EvalState.Contexts@">
+<summary>
+ Per-thread context.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.EvalState.ThreadId@">
+<summary>
+ The current thread ID. We use thread IDs starting from zero. We assign new
+ thread IDs by incrementing it by one at a time. The first thread is 0, the
+ second is 1, and so on.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalState.ThreadId(System.Int32)">
+<summary>
+ The current thread ID. We use thread IDs starting from zero. We assign new
+ thread IDs by incrementing it by one at a time. The first thread is 0, the
+ second is 1, and so on.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalState.PC(System.UInt64)">
+<summary>
+ Current PC.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalState.IsInstrTerminated(System.Boolean)">
+<summary>
+ Indicate whether to terminate the current instruction or not. This flag is
+ set to true when we encounter an inter-jump statement, so that we can
+ ignore the rest of the statements.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalState.InPrematureState(System.Boolean)">
+<summary>
+ Indicate whether we are in an abnormal state. If so, the rest of the
+ evaluation should be aborted. This flag should never be set in normal
+ situation.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalState.Contexts(B2R2.MiddleEnd.ConcEval.Context[])">
+<summary>
+ Per-thread context.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalState.ThreadId">
+<summary>
+ The current thread ID. We use thread IDs starting from zero. We assign new
+ thread IDs by incrementing it by one at a time. The first thread is 0, the
+ second is 1, and so on.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalState.PC">
+<summary>
+ Current PC.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalState.Memory">
+<summary>
+ Memory.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalState.IsInstrTerminated">
+<summary>
+ Indicate whether to terminate the current instruction or not. This flag is
+ set to true when we encounter an inter-jump statement, so that we can
+ ignore the rest of the statements.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalState.InPrematureState">
+<summary>
+ Indicate whether we are in an abnormal state. If so, the rest of the
+ evaluation should be aborted. This flag should never be set in normal
+ situation.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalState.IgnoreUndef">
+<summary>
+ Whether to ignore statements that cannot be evaluated due to undef values.
+ This is particularly useful to quickly check some constants.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalState.GetPC">
+<summary>
+ Get the program counter (PC).
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalState.Contexts">
+<summary>
+ Per-thread context.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalState.Callbacks">
+<summary>
+ Callback functions.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.UnsetTmp(System.Int32)">
+<summary>
+ Unset the given temporary variable.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.UnsetReg(System.Int32)">
+<summary>
+ Unset the given register.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.TryGetTmp(System.Int32)">
+<summary>
+ Get the value of the given temporary variable.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.TryGetReg(System.Int32)">
+<summary>
+ Get the value of the given register.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.StartInstr">
+<summary>
+ Start evaluating the instruction.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.SetTmp(System.Int32,B2R2.BitVector)">
+<summary>
+ Set the value for the given temporary variable.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.SetReg(System.Int32,B2R2.BitVector)">
+<summary>
+ Set the value for the given register.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.SetPC(System.UInt64)">
+<summary>
+ Set the program counter (PC).
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.SetMode(B2R2.ArchOperationMode)">
+<summary>
+ Set the architecture operation mode.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.PrepareInstrEval(B2R2.BinIR.LowUIR.Stmt[])">
+<summary>
+ Get ready for evaluating an instruction.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.PrepareContext``1(System.Int32,System.UInt64,Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.Int32,``0}})">
+<summary>
+ Prepare the initial context of the given thread id (tid). This function
+ will set the current thread to be tid.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.NextStmt">
+<summary>
+ Update the current statement index to be the next (current + 1) statement.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.GoToLabel(System.Tuple{System.String,System.Int32})">
+<summary>
+ Go to the statement of the given label.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.GetTmp(System.Int32)">
+<summary>
+ Get the value of the given temporary variable.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.GetReg(System.Int32)">
+<summary>
+ Get the value of the given register.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.GetMode">
+<summary>
+ Get the current architecture operation mode.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.GetCurrentContext">
+<summary>
+ Get the current context of the current thread.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.GetContext(System.Int32)">
+<summary>
+ Get the context of a specific thread.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.ContextSwitch(System.Int32)">
+<summary>
+ Thread context switch. If the given thread ID does not exist, we create a
+ new context for it.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.CleanUp">
+<summary>
+ Delete temporary states variables and get ready for evaluating the next
+ block of isntructions.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.EvalState.AbortInstr">
+<summary>
+ Stop evaluating further statements of the current instruction, and move on
+ the next instruction.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.ConcEval.EvalState">
+<summary>
+ The main evaluation state that will be updated by evaluating every statement
+ encountered during the course of execution.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.EvalCallBacks.StmtEvalEventHandler@">
+<summary>
+ Statement evaluation event handler.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.EvalCallBacks.SideEffectEventHandler@">
+<summary>
+ Side-effect event handler.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.EvalCallBacks.PutEventHandler@">
+<summary>
+ Put event handler. The first parameter is PC, and the second is the value
+ that is put to the destination.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.EvalCallBacks.StoreEventHandler@">
+<summary>
+ Memory store event handler.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.EvalCallBacks.LoadEventHandler@">
+<summary>
+ Memory load event handler.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.EvalCallBacks.PerInstrHandler@">
+<summary>
+ Per-instruction handler.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalCallBacks.StoreEventHandler(Microsoft.FSharp.Core.FSharpFunc{System.UInt64,Microsoft.FSharp.Core.FSharpFunc{System.UInt64,Microsoft.FSharp.Core.FSharpFunc{B2R2.BitVector,Microsoft.FSharp.Core.Unit}}})">
+<summary>
+ Memory store event handler.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalCallBacks.StmtEvalEventHandler(Microsoft.FSharp.Core.FSharpFunc{B2R2.BinIR.LowUIR.Stmt,Microsoft.FSharp.Core.Unit})">
+<summary>
+ Statement evaluation event handler.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalCallBacks.SideEffectEventHandler(Microsoft.FSharp.Core.FSharpFunc{B2R2.BinIR.SideEffect,Microsoft.FSharp.Core.FSharpFunc{B2R2.MiddleEnd.ConcEval.EvalState,Microsoft.FSharp.Core.Unit}})">
+<summary>
+ Side-effect event handler.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalCallBacks.PutEventHandler(Microsoft.FSharp.Core.FSharpFunc{System.UInt64,Microsoft.FSharp.Core.FSharpFunc{B2R2.BitVector,Microsoft.FSharp.Core.Unit}})">
+<summary>
+ Put event handler. The first parameter is PC, and the second is the value
+ that is put to the destination.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalCallBacks.PerInstrHandler(Microsoft.FSharp.Core.FSharpFunc{B2R2.MiddleEnd.ConcEval.EvalState,B2R2.MiddleEnd.ConcEval.EvalState})">
+<summary>
+ Per-instruction handler.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalCallBacks.LoadEventHandler(Microsoft.FSharp.Core.FSharpFunc{System.UInt64,Microsoft.FSharp.Core.FSharpFunc{System.UInt64,Microsoft.FSharp.Core.FSharpFunc{B2R2.BitVector,Microsoft.FSharp.Core.Unit}}})">
+<summary>
+ Memory load event handler.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalCallBacks.StoreEventHandler">
+<summary>
+ Memory store event handler.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalCallBacks.StmtEvalEventHandler">
+<summary>
+ Statement evaluation event handler.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalCallBacks.SideEffectEventHandler">
+<summary>
+ Side-effect event handler.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalCallBacks.PutEventHandler">
+<summary>
+ Put event handler. The first parameter is PC, and the second is the value
+ that is put to the destination.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalCallBacks.PerInstrHandler">
+<summary>
+ Per-instruction handler.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.EvalCallBacks.LoadEventHandler">
+<summary>
+ Memory load event handler.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.Context.Mode@">
+<summary>
+ Architecture mode.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.Context.Labels@">
+<summary>
+ Store labels and their corresponding statement indices.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.Context.Temporaries@">
+<summary>
+ Store temporary variable values.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.Context.Registers@">
+<summary>
+ Store named register values.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.Context.PC@">
+<summary>
+ The current program counter.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.ConcEval.Context.StmtIdx@">
+<summary>
+ The current index of the statement to evaluate within the scope of a
+ machine instruction. This index behaves like a PC for statements of an
+ instruction.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.Context.StmtIdx(System.Int32)">
+<summary>
+ The current index of the statement to evaluate within the scope of a
+ machine instruction. This index behaves like a PC for statements of an
+ instruction.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.Context.PC(System.UInt64)">
+<summary>
+ The current program counter.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.Context.Mode(B2R2.ArchOperationMode)">
+<summary>
+ Architecture mode.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.Context.Temporaries">
+<summary>
+ Store temporary variable values.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.Context.StmtIdx">
+<summary>
+ The current index of the statement to evaluate within the scope of a
+ machine instruction. This index behaves like a PC for statements of an
+ instruction.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.Context.Registers">
+<summary>
+ Store named register values.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.Context.PC">
+<summary>
+ The current program counter.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.Context.Mode">
+<summary>
+ Architecture mode.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.ConcEval.Context.Labels">
+<summary>
+ Store labels and their corresponding statement indices.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.ConcEval.InvalidMemException">
+<summary>
+ Raised when an invalid memory access.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.ConcEval.UndefExpException">
+<summary>
+ Raised when undefined expression is encountered.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.SafeEvaluator.evalBlock(B2R2.MiddleEnd.ConcEval.EvalState,System.UInt64,System.Int32,B2R2.BinIR.LowUIR.Stmt[][])">
+<summary>
+ Evaluate a block of statements. The block may represent a machine
+ instruction, or a basic block.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.SafeEvaluator.evalStmts(B2R2.BinIR.LowUIR.Stmt[],Microsoft.FSharp.Core.FSharpResult{B2R2.MiddleEnd.ConcEval.EvalState,B2R2.ErrorCase})">
+<summary>
+ Evaluate a sequence of statements, which is lifted from a single
+ instruction.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.ConcEval.SafeEvaluator">
+<summary>
+ ConcEval.SafeEvaluator is a safe concrete evaluation module for LowUIR.
+ Unlike ConcEval.Evaluator, it does not raise exceptions, but it is slower
+ than ConcEval.Evaluator.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.Evaluator.evalBlock(B2R2.MiddleEnd.ConcEval.EvalState,System.UInt64,System.Int32,B2R2.BinIR.LowUIR.Stmt[][])">
+<summary>
+ Evaluate a block of statements. The block represents a series of lifted IR
+ statements from one or more machine instructions.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.ConcEval.Evaluator.evalStmts(B2R2.BinIR.LowUIR.Stmt[],B2R2.MiddleEnd.ConcEval.EvalState)">
+<summary>
+ Evaluate a sequence of statements, which is lifted from a single
+ instruction.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.ConcEval.Evaluator">
+<summary>
+ ConcEval.Evaluator is a concrete evaluation module for LowUIR.
+</summary>
+</member>
+</members>
+</doc>

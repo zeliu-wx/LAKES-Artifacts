@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>B2R2.MiddleEnd.DataFlow</name></assembly>
+<members>
+<member name="F:B2R2.MiddleEnd.DataFlow.TopologicalDataFlowAnalysis`2.ins">
+<summary>
+ Entry lattice per vertex.
+</summary>
+</member>
+<member name="F:B2R2.MiddleEnd.DataFlow.TopologicalDataFlowAnalysis`2.outs">
+<summary>
+ Exit lattice per vertex.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.DataFlow.TopologicalDataFlowAnalysis`2.Transfer(`0,B2R2.MiddleEnd.BinGraph.Vertex{`1})">
+<summary>
+ The transfer function from an input lattice to an output lattice. The
+ second parameter is to specify the current block of interest.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.DataFlow.TopologicalDataFlowAnalysis`2.Meet(`0,`0)">
+<summary>
+ Meet operation of the lattice.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.DataFlow.TopologicalDataFlowAnalysis`2.InitInsOuts``1(B2R2.MiddleEnd.BinGraph.DiGraph{`1,``0},B2R2.MiddleEnd.BinGraph.Vertex{`1})">
+<summary>
+ Initialize ints and outs.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.DataFlow.TopologicalDataFlowAnalysis`2.Compute``1(B2R2.MiddleEnd.BinGraph.DiGraph{`1,``0},B2R2.MiddleEnd.BinGraph.Vertex{`1})">
+<summary>
+ Compute data-flow with the iterative worklist algorithm.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.DataFlow.TopologicalDataFlowAnalysis`2">
+<summary>
+ Classic data-flow analysis with topological worklist algorithm.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.DataFlow.DataFlowAnalysis`2.Top">
+<summary>
+ The top of the lattice. A data-flow analysis solution is computed by
+ iterating down from top to bottom.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.DataFlow.DataFlowAnalysis`2">
+<summary>
+ Data-flow analysis framework. &apos;L is a lattice, &apos;V is a vertex data type of a
+ graph.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.DataFlow.DataFlowDirection">
+<summary>
+ Either forward or backward analysis.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.DataFlow.VarPoint">
+<summary>
+ Program point of a defined variable.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.DataFlow.VarExpr">
+<summary>
+ Defined variable.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.DataFlow.CPState`1.SSAWorkList">
+<summary>
+ Worklist for SSA stmt, this stack stores a list of def variables, and we
+ will use SSAEdges to find all related SSA statements.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.DataFlow.CPState`1.FlowWorkList">
+<summary>
+ Worklist for blocks.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.DataFlow.CPState`1.DefaultWordSize">
+<summary>
+ Default word size of the current analysis.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.DataFlow.CPState`1.ExecutedEdges">
+<summary>
+ Executed edges from vid to vid.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.DataFlow.CPState`1.ExecutableEdges">
+<summary>
+ Executable edges from vid to vid. If there&apos;s no element for an edge, that
+ means the edge is not executable.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.DataFlow.CPState`1.MemState">
+<summary>
+ SSA mem values. Only store values of constant addresses.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.DataFlow.CPState`1.RegState">
+<summary>
+ SSA var values.
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.DataFlow.CPState`1.SSAEdges">
+<summary>
+ SSA edges
+</summary>
+</member>
+<member name="P:B2R2.MiddleEnd.DataFlow.CPState`1.BinHandle">
+<summary>
+ BinHandle of the current binary.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.DataFlow.SSAMemID">
+<summary>
+ An ID of an SSA memory instance.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.DataFlow.ConstantPropagation`1">
+<summary>
+ Modified version of sparse conditional constant propagation of Wegman et al.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.DataFlow.StackPointerPropagation">
+<summary>
+ Variant of Constant Propagation. It only cares stack-related registers:
+ stack pointer and frame pointer.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.DataFlow.ConstantCopyPropagation">
+<summary>
+ Variant of Constant Propagation. It only cares the copy of constants. When
+ the GOT pointer is calculated for x86-pie binaries, it only considers the
+ expression (adding thunk pointer and offset) other than Num.
+</summary>
+</member>
+<member name="T:B2R2.MiddleEnd.DataFlow.UntouchedValuePropagation">
+<summary>
+ Modified version of sparse conditional constant propagation of Wegman et al.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.DataFlow.DataFlowChainModule.filterLastDefInBlock(Microsoft.FSharp.Collections.FSharpSet{B2R2.MiddleEnd.DataFlow.VarPoint})">
+<summary>
+ When there are more than one defs for the same variable, we should choose
+ the last one.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.DataFlow.CPState.mergeMemWithMergePoints``1(B2R2.MiddleEnd.DataFlow.CPState{``0},Microsoft.FSharp.Core.FSharpOption{System.Tuple{Microsoft.FSharp.Collections.FSharpMap{System.UInt64,``0},Microsoft.FSharp.Collections.FSharpSet{System.UInt64}}},Microsoft.FSharp.Collections.FSharpSet{System.UInt64},B2R2.BinIR.SSA.Variable,System.Int32[])">
+<summary>
+ Merge memory with pre-calculated merge points
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.DataFlow.CPState.mergeMemWithoutMergePoints``1(B2R2.MiddleEnd.DataFlow.CPState{``0},Microsoft.FSharp.Core.FSharpOption{System.Tuple{Microsoft.FSharp.Collections.FSharpMap{System.UInt64,``0},Microsoft.FSharp.Collections.FSharpSet{System.UInt64}}},B2R2.BinIR.SSA.Variable,System.Int32[])">
+<summary>
+ Merge memory mapping and return true if changed.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.DataFlow.SCCPTransfer.isGetPCThunk(B2R2.FrontEnd.BinInterface.BinHandle,System.UInt64)">
+<summary>
+ This is a heuristic to discover __x86.get_pc_thunk- family functions.
+ 1. If a function name symbol exists and its name matches, then we know it is
+ __x86.get_pc_thunk- family
+ 2. But there are some cases we don&apos;t have symbols for them. In such cases,
+ we directly compare first 4 bytes of byte code. Because __x86.get_pc_thunk-
+ family only has 4 bytes for its function body and their values are fixed.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.DataFlow.StackState.computeMemoryMergePoints(B2R2.MiddleEnd.BinEssence.BinEssence,B2R2.MiddleEnd.BinGraph.DiGraph{B2R2.MiddleEnd.Lens.SSABBlock,B2R2.MiddleEnd.BinEssence.CFGEdgeKind},B2R2.MiddleEnd.DataFlow.CPState{B2R2.MiddleEnd.DataFlow.StackValue})">
+<summary>
+ Memory merge point means an address of which the merging operation should
+ be performed. Mempory merge point is necessary for dataflow analysis on
+ SSA. Without this, every time we meet a phi statement of a memory, we
+ should iterate memories and merge values at all exisitng addresses.
+</summary>
+</member>
+<member name="M:B2R2.MiddleEnd.DataFlow.CopyTransfer.isGetPCThunk(B2R2.FrontEnd.BinInterface.BinHandle,System.UInt64)">
+<summary>
+ This is a heuristic to discover __x86.get_pc_thunk- family functions.
+ 1. If a function name symbol exists and its name matches, then we know it is
+ __x86.get_pc_thunk- family
+ 2. But there are some cases we don&apos;t have symbols for them. In such cases,
+ we directly compare first 4 bytes of byte code. Because __x86.get_pc_thunk-
+ family only has 4 bytes for its function body and their values are fixed.
+</summary>
+</member>
+</members>
+</doc>
