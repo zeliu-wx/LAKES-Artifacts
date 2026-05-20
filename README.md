@@ -106,6 +106,54 @@ toolrank refresh-kb              # 用 raw 报告重建 performance_db
 外部分析器（Securify2、GPTScan、Sailfish、Smartian）的安装路径同样通过
 `TOOLRANK_*` 环境变量指定，详见 `toolrank/runner.py`。
 
+## Docker 真实执行
+
+镜像内置 ToolRank + SmartBugs + 一个内部 Docker 守护进程（Docker-in-Docker），
+可直接跑 SmartBugs 驱动的 16 个工具（slither、mythril、oyente、osiris、conkas、
+confuzzius、honeybadger、maian、manticore、sfuzz、smartcheck、solhint、securify、
+vandal、mando-hgt、vulhunter），无需在宿主手工安装它们。
+
+构建：
+
+```bash
+docker build -t toolrank .
+```
+
+**快速验证真实执行**（只跑某个工具，不需要 LLM）：
+
+```bash
+mkdir -p out
+docker run --rm --privileged \
+  -v toolrank-docker-cache:/var/lib/docker \
+  -v "$PWD/out:/work/out" \
+  --entrypoint bash toolrank -lc '
+    dockerd >/var/log/dockerd.log 2>&1 & \
+    for i in $(seq 1 60); do docker info >/dev/null 2>&1 && break; sleep 1; done; \
+    python -m toolrank.runner examples/Reentrancy.sol /work/out \
+      --tools slither --primary_tool slither --timeout 600'
+# 结果：out/LAKES_out/Reentrancy/raw/slither/result.json
+```
+
+**完整推荐 + 执行**（额外需要你自己的 LLM/embedding 端点，供 CEGO 与检索使用）：
+
+```bash
+docker run --rm --privileged \
+  -v toolrank-docker-cache:/var/lib/docker \
+  -v "$PWD/out:/work/out" \
+  -e OPENAI_API_KEY=... -e TOOLRANK_OPENAI_BASE_URL=... \
+  -e TOOLRANK_EMBEDDING_API_KEY=... -e TOOLRANK_EMBEDDING_BASE_URL=... \
+  toolrank recommend examples/Reentrancy.sol --execute --emit summary --results-root /work/out
+```
+
+要点：
+
+- **`--privileged` 必需**：镜像内运行自带的 dockerd 来拉起各工具容器（Docker-in-Docker）。
+  这样 SmartBugs 与工具容器共享同一文件系统命名空间，避免挂宿主 socket 时的路径不匹配。
+- **镜像缓存**：命名卷 `-v toolrank-docker-cache:/var/lib/docker` 让首次拉取的工具镜像
+  （如 `smartbugs/slither:0.11.3`）跨运行持久化；首次运行会下载，较慢。
+- **跨架构**：部分工具镜像为 `linux/amd64`；Apple Silicon 走 QEMU 模拟，可跑但较慢。
+- **securify2 / gptscan / sailfish / smartian**：尚未纳入本镜像（见仓库 Phase 2 计划）。
+
 ## 审计链
 
 每次推荐都自带可复盘字段：
