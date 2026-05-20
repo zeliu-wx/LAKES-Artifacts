@@ -19,8 +19,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         docker-ce docker-ce-cli containerd.io \
     && rm -rf /var/lib/apt/lists/*
 
-# solc-select（多版本 solc）
-RUN pip install solc-select
+# solc-select（多版本 solc）+ 预装常用版本（smartian 用本地 solc 编译合约；
+# 其它版本运行时按需 solc-select install）
+RUN pip install solc-select \
+    && solc-select install 0.4.25 0.5.12 0.6.12 0.8.19 || true
+
+# .NET 8 SDK（smartian 跑 Smartian.dll；run_smartian 的预检用 `dotnet --version` 需 SDK）
+RUN curl -sSL https://dot.net/v1/dotnet-install.sh -o /tmp/dotnet-install.sh \
+    && bash /tmp/dotnet-install.sh --channel 8.0 --install-dir /opt/dotnet \
+    && rm /tmp/dotnet-install.sh
 
 # SmartBugs：克隆 + poetry 安装到系统环境
 RUN pip install poetry \
@@ -55,6 +62,13 @@ RUN python -m venv /work/docker/vendor/gptscan/.venv \
 # 按合约 solc 版本 docker build securify:{ver} 再运行；securifyjson.py 调用 `sudo docker`，
 # 故镜像装 sudo。源码已随 COPY . /work 进镜像）
 ENV TOOLRANK_SECURIFY2_RUNNER=/work/docker/vendor/securify2/securifyjson.py
+
+# Phase 2 特例工具：smartian（.NET 8 跑 Smartian.dll；run_smartian 用本地 solc 编译合约后
+# 模糊测试）。构建产物与瘦包装脚本已随 COPY . /work 进镜像。INVARIANT 绕开 libicu 依赖。
+ENV DOTNET_ROOT=/opt/dotnet \
+    PATH=/opt/dotnet:${PATH} \
+    DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 \
+    TOOLRANK_SMARTIAN_RUNNER=/work/docker/runners/run_smartian.py
 
 # 内部 dockerd 的镜像/层存储；可用命名卷挂载以跨运行缓存已拉取的工具镜像
 VOLUME /var/lib/docker
